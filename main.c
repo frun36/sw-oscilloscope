@@ -12,6 +12,19 @@ void init_adc() {
 									(0b100 << 24);  	// Start conversion on MAT0.1 rising edge (default, bit 27)
 	
 	LPC_PINCON->PINSEL1 |= (1 << 16); // P0.24 as ADC0.1
+	
+	LPC_ADC->ADINTEN |= (1 << 1); // Conversion on channel one generates interrupt
+	NVIC_EnableIRQ(ADC_IRQn);
+}
+
+void ADC_IRQHandler() {
+	uint16_t adc_val = (LPC_ADC->ADGDR >> 4) & 0xFFF;
+	
+	draw_buffer(buff, 0);
+	for (uint32_t i = 0; i < SCOPE_MAX_X; i++) {
+		buff[i] = adc_val * SCOPE_MAX_Y / 0xFFF;
+	}
+	draw_buffer(buff, 0x07E0);
 }
 
 void init_tim0() {
@@ -39,15 +52,7 @@ void setup() {
 }
 
 void loop() {
-	while(!(LPC_ADC->ADGDR >> 31)); // Wait for result
-	
-	uint16_t adc_val = (LPC_ADC->ADGDR >> 4) & 0xFFF;
-	
-	draw_buffer(buff, 0);
-	for (uint32_t i = 0; i < SCOPE_MAX_X; i++) {
-		buff[i] = adc_val * SCOPE_MAX_Y / 0xFFF;
-	}
-	draw_buffer(buff, 0b0000011111100000);
+	__WFI();	
 }
 
 int main() {
