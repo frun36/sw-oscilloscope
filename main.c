@@ -1,34 +1,25 @@
 #include "LPC17xx.h"
 #include "Board_LED.h"
-#include "LCD/LCD_ILI9325.h"
-#include "LCD/Open1768_LCD.h"
+#include "LCDControl.h"
 
-typedef uint16_t Color;
+#include <math.h>
 
-void fill(Color color) {
-	lcdSetCursor(0, 0);
-	lcdWriteIndex(DATA_RAM);
-	for (uint32_t i = 0; i < LCD_MAX_X * LCD_MAX_Y; i++)
-		lcdWriteData(color);
-}
+uint16_t buff[SCOPE_MAX_X] = {};
 
 void setup() {
-	lcdConfiguration();
-	init_ILI9325();
-	lcdWriteReg(HADRPOS_RAM_START, 0);
-	lcdWriteReg(HADRPOS_RAM_END, LCD_MAX_X);
-	lcdWriteReg(VADRPOS_RAM_START, 0);
-	lcdWriteReg(VADRPOS_RAM_END, LCD_MAX_Y);
+	init_lcd();
 	LED_Initialize();
 	LED_SetOut(0);
 	fill(LCDBlack);
+	
+	for (uint32_t i = 0; i < SCOPE_MAX_X; i++) {
+		float sine = sinf(2 * 3.1415 / SCOPE_MAX_X * i);
+		buff[i] = (sine + 1.) * 0.5 * SCOPE_MAX_Y;
+	}
 }
 
 void loop() {
-	static Color i = 0;
-	LED_SetOut(i++ % 16);
-	fill(i);
-	for(int j = 0; j < 1000000; j++) {	}
+	draw_buffer(buff, 0xffff);
 }
 
 int main() {
