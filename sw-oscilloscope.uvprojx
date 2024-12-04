@@ -387,6 +387,16 @@
               <FileType>1</FileType>
               <FilePath>.\main.c</FilePath>
             </File>
+            <File>
+              <FileName>LCD_ILI9325.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LCD\LCD_ILI9325.c</FilePath>
+            </File>
+            <File>
+              <FileName>Open1768_LCD.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LCD\Open1768_LCD.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

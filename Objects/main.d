@@ -8,3 +8,5 @@
 .\objects\main.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include\mpu_armv7.h
 .\objects\main.o: C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include\system_LPC17xx.h
 .\objects\main.o: C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.8.0\Board\Board_LED.h
+.\objects\main.o: LCD/LCD_ILI9325.h
+.\objects\main.o: LCD/Open1768_LCD.h
