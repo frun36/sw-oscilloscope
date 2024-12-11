@@ -1,8 +1,8 @@
 #include "LPC17xx.h"
 #include "Board_LED.h"
-#include "Board_Buttons.h"
 #include "LCDControl.h"
 #include "Buffer.h"
+#include "Trigger.h"
 
 Buffer buff;
 
@@ -20,26 +20,34 @@ void init_adc() {
 }
 
 void ADC_IRQHandler() {
-	uint16_t adc_val = (LPC_ADC->ADGDR >> 4) & 0xFFF; // Clears global interrupt flag
-	
+	static uint16_t prev_val = 0;
+	static uint8_t counter = 0;
+	static uint8_t count_threshold = 20;
 	static uint32_t led = 0;
-	static uint8_t trigger = 0;
+	static uint8_t triggered = 0;
+	
+	uint16_t adc_val = (LPC_ADC->ADGDR >> 4) & 0xFFF; // Clears global interrupt flag
 	
 	LED_SetOut(led);
 	led = (led ? 0 : 1);
 	
-	uint8_t is_button_pressed = Buttons_GetState() & 1;
-	trigger = trigger || is_button_pressed;	
+	if (!triggered)
+		triggered = edge_trigger(10, prev_val, adc_val);
 	
-	if(!trigger)
+	if(!triggered)
 		return;
 	
 	if(!buff_append(&buff, adc_val * SCOPE_MAX_Y / 0xFFF)) {
 		draw_buffer(buff.old, buff.size, 0x0000);
 		draw_buffer(buff.arr, buff.size, 0x07E0);
 		buff_clear(&buff);
-		trigger = 0;
+		triggered = 0;
 	}
+	
+	if(counter == 0)
+		prev_val = adc_val;
+	
+	counter = (counter + 1) % count_threshold;
 }
 
 void init_tim0() {
