@@ -22,7 +22,7 @@ void init_adc() {
 void ADC_IRQHandler() {
 	static uint16_t prev_val = 0;
 	static uint8_t counter = 0;
-	static uint8_t count_threshold = 20;
+	static uint8_t count_threshold = 10;
 	static uint32_t led = 0;
 	static uint8_t triggered = 0;
 	
@@ -32,7 +32,8 @@ void ADC_IRQHandler() {
 	led = (led ? 0 : 1);
 	
 	if (!triggered)
-		triggered = edge_trigger(10, prev_val, adc_val);
+		triggered = edge_trigger(0xFFF / 2, prev_val, adc_val);
+		// triggered = level_trigger(0xFFF / 2 + 0xFF, adc_val);
 	
 	if(!triggered)
 		return;

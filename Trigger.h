@@ -13,7 +13,7 @@ uint8_t level_trigger(uint16_t thresh, uint16_t val) {
 }
 
 uint8_t edge_trigger(uint16_t thresh, uint16_t prev, uint16_t curr) {
-	return prev < curr && curr - prev > thresh;
+	return prev < thresh && curr > thresh;
 }
 
 #endif
