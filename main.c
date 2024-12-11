@@ -1,5 +1,6 @@
 #include "LPC17xx.h"
 #include "Board_LED.h"
+#include "Board_Buttons.h"
 #include "LCDControl.h"
 #include "Buffer.h"
 
@@ -22,15 +23,23 @@ void ADC_IRQHandler() {
 	uint16_t adc_val = (LPC_ADC->ADGDR >> 4) & 0xFFF; // Clears global interrupt flag
 	
 	static uint32_t led = 0;
+	static uint8_t trigger = 0;
+	
+	LED_SetOut(led);
+	led = (led ? 0 : 1);
+	
+	uint8_t is_button_pressed = Buttons_GetState() & 1;
+	trigger = trigger || is_button_pressed;	
+	
+	if(!trigger)
+		return;
 	
 	if(!buff_append(&buff, adc_val * SCOPE_MAX_Y / 0xFFF)) {
 		draw_buffer(buff.old, buff.size, 0x0000);
 		draw_buffer(buff.arr, buff.size, 0x07E0);
 		buff_clear(&buff);
+		trigger = 0;
 	}
-
-	LED_SetOut(led);
-	led = (led ? 0 : 1);
 }
 
 void init_tim0() {
