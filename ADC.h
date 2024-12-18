@@ -10,10 +10,14 @@
 #define ADC_VMIN 0
 #define ADC_VMAX 3300
 
-extern Buffer buff;
+// samples
+#define ADC_SMAX 0xFFF
+
+// Requires a buffer to be present in main
 
 void ADC_IRQHandler(void);
 
 void init_adc(void);
+void handle_draw(void);
 
 #endif
