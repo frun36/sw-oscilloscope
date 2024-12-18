@@ -412,6 +412,31 @@
               <FileType>5</FileType>
               <FilePath>.\Trigger.h</FilePath>
             </File>
+            <File>
+              <FileName>ADC.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\ADC.h</FilePath>
+            </File>
+            <File>
+              <FileName>Buffer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Buffer.c</FilePath>
+            </File>
+            <File>
+              <FileName>Trigger.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Trigger.c</FilePath>
+            </File>
+            <File>
+              <FileName>LCDControl.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LCDControl.c</FilePath>
+            </File>
+            <File>
+              <FileName>ADC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\ADC.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -435,6 +460,12 @@
           <targetInfo name="Target 1"/>
         </targetInfos>
       </api>
+      <api Capiversion="1.0.0" Cclass="Board Support" Cgroup="Joystick" exclusive="0">
+        <package name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.8.0"/>
+        <targetInfos>
+          <targetInfo name="Target 1"/>
+        </targetInfos>
+      </api>
       <api Capiversion="1.0.0" Cclass="Board Support" Cgroup="LED" exclusive="0">
         <package name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.8.0"/>
         <targetInfos>
@@ -450,6 +481,12 @@
         </targetInfos>
       </component>
       <component Capiversion="1.0.0" Cbundle="Open1768" Cclass="Board Support" Cgroup="Buttons" Cvendor="Keil" Cversion="1.0.0" condition="LPC1700 CMSIS PIN GPIO">
+        <package name="LPC1700_DFP" schemaVersion="1.2" url="http://www.keil.com/pack/" vendor="Keil" version="2.6.1"/>
+        <targetInfos>
+          <targetInfo name="Target 1"/>
+        </targetInfos>
+      </component>
+      <component Capiversion="1.0.0" Cbundle="Open1768" Cclass="Board Support" Cgroup="Joystick" Cvendor="Keil" Cversion="1.0.0" condition="LPC1700 CMSIS PIN GPIO">
         <package name="LPC1700_DFP" schemaVersion="1.2" url="http://www.keil.com/pack/" vendor="Keil" version="2.6.1"/>
         <targetInfos>
           <targetInfo name="Target 1"/>
