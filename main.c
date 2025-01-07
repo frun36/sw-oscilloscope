@@ -19,19 +19,15 @@ void init_tim0() {
 }
 	
 void setup() {
-	init_lcd();
-	
 	LED_Initialize();
 	LED_SetOut(0);
 	
+	init_lcd();
 	init_tim0();
 	init_adc();
-	
 	init_joystick();
 	
 	LED_SetOut(1);
-	
-	LED_SetOut(2);
 }
 
 void loop() {

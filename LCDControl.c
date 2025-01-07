@@ -22,7 +22,7 @@ void draw_point(uint16_t x, uint16_t y, uint16_t color) {
 	lcdWriteReg(DATA_RAM, color);
 }
 
-void draw_buffer(uint16_t* buff, uint32_t size, uint16_t color) {
+void draw_trace(uint16_t* buff, uint32_t size, uint16_t color) {
 	for (uint32_t i = 0; i < size; i++) {
 		draw_point(i, buff[i], color);
 	}

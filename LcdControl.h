@@ -11,6 +11,6 @@
 void fill(uint16_t color);
 void init_lcd(void);
 void draw_point(uint16_t x, uint16_t y, uint16_t color);
-void draw_buffer(uint16_t* buff, uint32_t size, uint16_t color);
+void draw_trace(uint16_t* buff, uint32_t size, uint16_t color);
 
 #endif
