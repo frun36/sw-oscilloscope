@@ -11,6 +11,6 @@ typedef struct {
 
 extern Control control;
 void EINT3_IRQHandler(void);
-void init_joystick(void);
+void init_control(void);
 
 #endif

@@ -25,7 +25,7 @@ void setup() {
 	init_lcd();
 	init_tim0();
 	init_adc();
-	init_joystick();
+	init_control();
 	
 	LED_SetOut(1);
 }

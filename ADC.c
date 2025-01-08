@@ -3,7 +3,7 @@
 extern Buffer buff;
 extern uint8_t do_draw;
 
-extern uint8_t control_step;
+extern uint16_t control_step;
 extern uint16_t control_vmax;
 
 uint8_t triggered = 0;
