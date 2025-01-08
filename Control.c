@@ -22,10 +22,10 @@ static void update_settings(uint16_t new_step, uint16_t new_vmax, uint16_t new_t
 	if (control_vmax == new_vmax && new_trigger_level == trigger_level)
 		return;
 	
-	draw_horizontal(MIN(trigger_level * SCOPE_MAX_Y / control_vmax, SCOPE_MAX_Y), SCOPE_MAX_X, 0);
+	draw_horizontal(MIN(trigger_level * SCOPE_MAX_Y / control_vmax, SCOPE_MAX_Y), 0);
 	control_vmax = new_vmax;
 	trigger_level = new_trigger_level;
-	draw_horizontal(MIN(trigger_level * SCOPE_MAX_Y / control_vmax, SCOPE_MAX_Y), SCOPE_MAX_X, 0xDD00);
+	draw_horizontal(MIN(trigger_level * SCOPE_MAX_Y / control_vmax, SCOPE_MAX_Y), 0xDD00);
 }
 
 void init_control() {

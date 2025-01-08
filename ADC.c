@@ -52,6 +52,7 @@ void handle_draw() {
 	LED_On(3);
 	draw_traces(buff.arr, buff.old, buff.size, 0x07E0);
 	buff_clear(&buff);
+	
 	LED_Off(3);
 }
 

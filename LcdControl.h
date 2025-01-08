@@ -12,6 +12,7 @@ void fill(uint16_t color);
 void init_lcd(void);
 void draw_point(uint16_t x, uint16_t y, uint16_t color);
 void draw_traces(uint16_t* buff, uint16_t* old, uint32_t size, uint16_t color);
-void draw_horizontal(uint16_t y, uint16_t x_max, uint16_t color);
+void draw_horizontal(uint16_t y, uint16_t color);
+void draw_vertical(uint16_t x, uint16_t color);
 
 #endif
