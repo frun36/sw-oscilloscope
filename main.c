@@ -9,7 +9,7 @@ uint8_t do_draw = 0;
 
 void init_tim0() {
 	// uint32_t us = 100; // 10 kHz sample rate
-	uint32_t us = 1000;
+	uint32_t us = 10;
 	LPC_TIM0->TCR = 0;
 	LPC_TIM0->TCR = 1;
 	LPC_TIM0->PR = 0;
@@ -32,6 +32,7 @@ void setup() {
 
 void loop() {
 	handle_draw();
+	LED_Off(2);
 	__WFI();	
 }
 

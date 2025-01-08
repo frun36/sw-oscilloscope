@@ -6,6 +6,8 @@ extern uint8_t do_draw;
 extern uint8_t control_step;
 extern uint16_t control_vmax;
 
+uint8_t triggered = 0;
+
 uint16_t get_mv(uint32_t adc_val) {
 	static uint32_t diff = ADC_VMAX - ADC_VMIN;
 	
@@ -13,14 +15,19 @@ uint16_t get_mv(uint32_t adc_val) {
 }
 
 void ADC_IRQHandler() {
-	do_draw = 0;
 	static uint16_t prev_val = 0;
 	static uint32_t counter = 0;
 	static uint8_t count_threshold = 8;
-	static uint8_t triggered = 0;
+	
+	LED_On(2);
+	do_draw = 0;	
+	counter++;
 	
 	uint16_t adc_val = (LPC_ADC->ADGDR >> 4) & 0xFFF; // Clears global interrupt flag
-    uint16_t mv = get_mv(adc_val);
+  uint16_t mv = get_mv(adc_val);
+	
+	if(counter % count_threshold == 0)
+		prev_val = adc_val;
 	
 	if (!triggered)
 		triggered = edge_trigger(0xFFF / 2, prev_val, adc_val);
@@ -28,18 +35,14 @@ void ADC_IRQHandler() {
 	if(!triggered)
 		return;
 
-    if(counter % control_step != 0)
-        return;
+  if(counter % control_step != 0)
+    return;
 	
-	if(!buff_append(&buff, mv * SCOPE_MAX_Y / control_vmax)) {
+	uint16_t scope_value = mv > control_vmax ? SCOPE_MAX_Y : mv * SCOPE_MAX_Y / control_vmax;
+	if(!buff_append(&buff, scope_value)) {
 		triggered = 0;
 		do_draw = 1;
 	}
-	
-	if(counter % count_threshold == 0)
-		prev_val = adc_val;
-	
-	counter++;
 }
 
 void handle_draw() {

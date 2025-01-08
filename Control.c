@@ -7,6 +7,8 @@
 
 static const uint8_t JOYSTICK_PINS[] = {8, 12, 13, 11, 10};
 
+extern uint8_t triggered;
+
 uint8_t control_step = 1;
 uint16_t control_vmax = ADC_VMAX;
 
@@ -35,11 +37,11 @@ JoystickState get_joystick_state() {
 	if (!GPIO_PinRead(2, JOYSTICK_PINS[0]))
 		return TOP;
 	else if (!GPIO_PinRead(2, JOYSTICK_PINS[1]))
-		return LEFT;
-	else if (!GPIO_PinRead(2, JOYSTICK_PINS[2]))
-		return BOTTOM;
-	else if (!GPIO_PinRead(2, JOYSTICK_PINS[3]))
 		return RIGHT;
+	else if (!GPIO_PinRead(2, JOYSTICK_PINS[2]))
+		return LEFT;
+	else if (!GPIO_PinRead(2, JOYSTICK_PINS[3]))
+		return BOTTOM;
 	else if (!GPIO_PinRead(2, JOYSTICK_PINS[4]))
 		return PRESSED;
 	else
@@ -47,29 +49,33 @@ JoystickState get_joystick_state() {
 }
 
 void EINT3_IRQHandler() {
-	LED_On(2);
+	LED_On(1);
 
 	for (uint32_t i = 0; i < 1000000; i++) // debounce
 		;
 
 	switch (get_joystick_state()) {
-		case LEFT:
+		case RIGHT:
 			if (control_step > 1)
 				control_step--;
 			break;
-		case RIGHT:
+		case LEFT:
 			control_step++;
 			break;
 		case TOP:
-			if (control_vmax <= ADC_VMAX - 100)
-				control_vmax += 100;
-			break;
-		case BOTTOM:
 			if (control_vmax >= 100)
 				control_vmax -= 100;
 			break;
+		case BOTTOM:
+			control_vmax += 100;
+			break;
+		case PRESSED:
+			triggered = 1;
+			break;
+		default:
+			break;
 	}
 	
-	LED_Off(2);
+	LED_Off(1);
 	LPC_GPIOINT->IO2IntClr = 0xFFFFFFFF;
 }
