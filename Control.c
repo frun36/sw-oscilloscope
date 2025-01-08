@@ -4,13 +4,29 @@
 #include "PIN_LPC17xx.h"
 #include "GPIO_LPC17xx.h"
 #include "Board_LED.h"
+#include "LCDControl.h"
+
+#define MIN(a, b) ((a) < (b) ? (a) : (b))
 
 static const uint8_t CONTROL_PINS[] = {8, 12, 13, 9, 11, 10};
 
 extern uint8_t triggered;
 
-uint16_t control_step = 16;
-uint16_t control_vmax = ADC_VMAX;
+uint16_t control_step;
+uint16_t control_vmax;
+uint16_t trigger_level;
+
+static void update_settings(uint16_t new_step, uint16_t new_vmax, uint16_t new_trigger_level) {
+	control_step = new_step;
+	
+	if (control_vmax == new_vmax && new_trigger_level == trigger_level)
+		return;
+	
+	draw_horizontal(MIN(trigger_level * SCOPE_MAX_Y / control_vmax, SCOPE_MAX_Y), SCOPE_MAX_X, 0);
+	control_vmax = new_vmax;
+	trigger_level = new_trigger_level;
+	draw_horizontal(MIN(trigger_level * SCOPE_MAX_Y / control_vmax, SCOPE_MAX_Y), SCOPE_MAX_X, 0xDD00);
+}
 
 void init_control() {
 	// A			P2.8
@@ -31,6 +47,8 @@ void init_control() {
 	
 	NVIC_EnableIRQ(EINT3_IRQn);
 	NVIC_SetPriority(EINT3_IRQn, 0);
+	
+	update_settings(16, ADC_VMAX, ADC_VMAX / 2);
 }
 
 typedef enum { NONE, TOP, RIGHT, BOTTOM, LEFT, KEY1, KEY2 } ControlState;
@@ -61,22 +79,28 @@ void EINT3_IRQHandler() {
 	switch (get_joystick_state()) {
 		case RIGHT:
 			if (control_step > 1)
-				control_step /= 2;
+				update_settings(control_step / 2, control_vmax, trigger_level);
 			break;
 		case LEFT:
-			control_step *= 2;
+			update_settings(control_step * 2, control_vmax, trigger_level);
 			break;
 		case TOP:
-			if (control_vmax >= 100)
-				control_vmax -= 100;
+			if (control_vmax >= 300)
+				update_settings(control_step, control_vmax - 300, trigger_level);
 			break;
 		case BOTTOM:
-			control_vmax += 100;
+			update_settings(control_step, control_vmax + 300, trigger_level);
+			break;
+		case KEY1:
+			if (trigger_level >= 300)
+				update_settings(control_step, control_vmax, trigger_level - 300);
+			break;
+		case KEY2:
+			update_settings(control_step, control_vmax, trigger_level + 300);
 			break;
 		default:
 			break;
 	}
-	
 	LED_Off(1);
 	LPC_GPIOINT->IO2IntClr = 0xFFFFFFFF;
 }
