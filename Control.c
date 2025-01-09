@@ -6,7 +6,11 @@
 #include "Board_LED.h"
 #include "LCDControl.h"
 
+#include <stdio.h>
+
 #define MIN(a, b) ((a) < (b) ? (a) : (b))
+#define DEBUG
+
 
 static const uint8_t CONTROL_PINS[] = {8, 12, 13, 9, 11, 10};
 
