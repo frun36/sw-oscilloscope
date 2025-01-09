@@ -1,4 +1,5 @@
 #include "LCDControl.h"
+#include "LCD/asciiLib.h"
 
 void fill(uint16_t color) {
 	lcdSetCursor(0, 0);
@@ -78,6 +79,6 @@ void draw_char(uint16_t x0, uint16_t y0, unsigned char c, uint16_t fg_color, uin
 
 void draw_string(uint16_t x0, uint16_t y0, const char* str, uint16_t n, uint16_t fg_color, uint16_t bg_color) {
     for (uint16_t i = 0; i < n; i++) {
-        draw_char(x0 + 100 + i * 8, 200, y0 + str[i], fg_color, bg_color);
+        draw_char(x0 + i * 8, y0, str[i], fg_color, bg_color);
     }
 }

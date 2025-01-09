@@ -689,47 +689,47 @@ Image Symbol Table
     i.draw_horizontal                        0x000027ce   Section        0  lcdcontrol.o(i.draw_horizontal)
     i.draw_point                             0x000027fe   Section        0  lcdcontrol.o(i.draw_point)
     i.draw_string                            0x00002818   Section        0  lcdcontrol.o(i.draw_string)
-    i.draw_traces                            0x00002854   Section        0  lcdcontrol.o(i.draw_traces)
-    i.draw_vertical                          0x0000289c   Section        0  lcdcontrol.o(i.draw_vertical)
-    i.edge_trigger                           0x000028ca   Section        0  trigger.o(i.edge_trigger)
-    i.fill                                   0x000028dc   Section        0  lcdcontrol.o(i.fill)
-    i.get_joystick_state                     0x00002904   Section        0  control.o(i.get_joystick_state)
-    i.get_mv                                 0x00002970   Section        0  adc.o(i.get_mv)
-    i.handle_draw                            0x00002988   Section        0  adc.o(i.handle_draw)
-    i.init_ILI9325                           0x000029c4   Section        0  lcd_ili9325.o(i.init_ILI9325)
-    i.init_adc                               0x00002b98   Section        0  adc.o(i.init_adc)
-    i.init_control                           0x00002c20   Section        0  control.o(i.init_control)
-    i.init_lcd                               0x00002cb8   Section        0  lcdcontrol.o(i.init_lcd)
-    i.init_tim0                              0x00002d2c   Section        0  adc.o(i.init_tim0)
-    i.init_uart                              0x00002d64   Section        0  control.o(i.init_uart)
-    i.is_on_grid                             0x00002db0   Section        0  lcdcontrol.o(i.is_on_grid)
-    is_on_grid                               0x00002db1   Thumb Code    32  lcdcontrol.o(i.is_on_grid)
-    i.lcdConfiguration                       0x00002dd0   Section        0  open1768_lcd.o(i.lcdConfiguration)
-    i.lcdSend                                0x00002df8   Section        0  open1768_lcd.o(i.lcdSend)
-    i.lcdSetCursor                           0x00002e24   Section        0  open1768_lcd.o(i.lcdSetCursor)
-    i.lcdWriteData                           0x00002e3c   Section        0  open1768_lcd.o(i.lcdWriteData)
-    i.lcdWriteIndex                          0x00002e74   Section        0  open1768_lcd.o(i.lcdWriteIndex)
-    i.lcdWriteReg                            0x00002eb4   Section        0  open1768_lcd.o(i.lcdWriteReg)
-    i.loop                                   0x00002ec8   Section        0  main.o(i.loop)
-    i.main                                   0x00002ed8   Section        0  main.o(i.main)
-    i.setup                                  0x00002ee4   Section        0  main.o(i.setup)
-    i.update_settings                        0x00002f0c   Section        0  control.o(i.update_settings)
-    update_settings                          0x00002f0d   Thumb Code   324  control.o(i.update_settings)
-    i.wait_delay                             0x00003088   Section        0  open1768_lcd.o(i.wait_delay)
-    .constdata                               0x0000309a   Section        6  control.o(.constdata)
-    CONTROL_PINS                             0x0000309a   Data           6  control.o(.constdata)
-    .constdata                               0x000030a0   Section     3040  asciilib.o(.constdata)
-    AsciiLib                                 0x000030a0   Data        3040  asciilib.o(.constdata)
-    .constdata                               0x00003c80   Section        8  led_open1768.o(.constdata)
-    LED_PIN                                  0x00003c80   Data           8  led_open1768.o(.constdata)
-    .constdata                               0x00003c88   Section      468  uart_lpc17xx.o(.constdata)
-    usart_driver_version                     0x00003c88   Data           4  uart_lpc17xx.o(.constdata)
-    fract_div_lookup_table                   0x00003c8c   Data         288  uart_lpc17xx.o(.constdata)
-    USART0_pin_tx                            0x00003dac   Data           2  uart_lpc17xx.o(.constdata)
-    USART0_pin_rx                            0x00003dae   Data           2  uart_lpc17xx.o(.constdata)
-    UART0_DMA_Tx                             0x00003db0   Data           8  uart_lpc17xx.o(.constdata)
-    UART0_DMA_Rx                             0x00003db8   Data           8  uart_lpc17xx.o(.constdata)
-    USART0_Resources                         0x00003dc0   Data         100  uart_lpc17xx.o(.constdata)
+    i.draw_traces                            0x0000284c   Section        0  lcdcontrol.o(i.draw_traces)
+    i.draw_vertical                          0x00002894   Section        0  lcdcontrol.o(i.draw_vertical)
+    i.edge_trigger                           0x000028c2   Section        0  trigger.o(i.edge_trigger)
+    i.fill                                   0x000028d4   Section        0  lcdcontrol.o(i.fill)
+    i.get_joystick_state                     0x000028fc   Section        0  control.o(i.get_joystick_state)
+    i.get_mv                                 0x00002968   Section        0  adc.o(i.get_mv)
+    i.handle_draw                            0x00002980   Section        0  adc.o(i.handle_draw)
+    i.init_ILI9325                           0x000029bc   Section        0  lcd_ili9325.o(i.init_ILI9325)
+    i.init_adc                               0x00002b90   Section        0  adc.o(i.init_adc)
+    i.init_control                           0x00002c18   Section        0  control.o(i.init_control)
+    i.init_lcd                               0x00002cb0   Section        0  lcdcontrol.o(i.init_lcd)
+    i.init_tim0                              0x00002d24   Section        0  adc.o(i.init_tim0)
+    i.init_uart                              0x00002d5c   Section        0  control.o(i.init_uart)
+    i.is_on_grid                             0x00002da8   Section        0  lcdcontrol.o(i.is_on_grid)
+    is_on_grid                               0x00002da9   Thumb Code    32  lcdcontrol.o(i.is_on_grid)
+    i.lcdConfiguration                       0x00002dc8   Section        0  open1768_lcd.o(i.lcdConfiguration)
+    i.lcdSend                                0x00002df0   Section        0  open1768_lcd.o(i.lcdSend)
+    i.lcdSetCursor                           0x00002e1c   Section        0  open1768_lcd.o(i.lcdSetCursor)
+    i.lcdWriteData                           0x00002e34   Section        0  open1768_lcd.o(i.lcdWriteData)
+    i.lcdWriteIndex                          0x00002e6c   Section        0  open1768_lcd.o(i.lcdWriteIndex)
+    i.lcdWriteReg                            0x00002eac   Section        0  open1768_lcd.o(i.lcdWriteReg)
+    i.loop                                   0x00002ec0   Section        0  main.o(i.loop)
+    i.main                                   0x00002ed0   Section        0  main.o(i.main)
+    i.setup                                  0x00002edc   Section        0  main.o(i.setup)
+    i.update_settings                        0x00002f04   Section        0  control.o(i.update_settings)
+    update_settings                          0x00002f05   Thumb Code   324  control.o(i.update_settings)
+    i.wait_delay                             0x00003080   Section        0  open1768_lcd.o(i.wait_delay)
+    .constdata                               0x00003092   Section        6  control.o(.constdata)
+    CONTROL_PINS                             0x00003092   Data           6  control.o(.constdata)
+    .constdata                               0x00003098   Section     3040  asciilib.o(.constdata)
+    AsciiLib                                 0x00003098   Data        3040  asciilib.o(.constdata)
+    .constdata                               0x00003c78   Section        8  led_open1768.o(.constdata)
+    LED_PIN                                  0x00003c78   Data           8  led_open1768.o(.constdata)
+    .constdata                               0x00003c80   Section      468  uart_lpc17xx.o(.constdata)
+    usart_driver_version                     0x00003c80   Data           4  uart_lpc17xx.o(.constdata)
+    fract_div_lookup_table                   0x00003c84   Data         288  uart_lpc17xx.o(.constdata)
+    USART0_pin_tx                            0x00003da4   Data           2  uart_lpc17xx.o(.constdata)
+    USART0_pin_rx                            0x00003da6   Data           2  uart_lpc17xx.o(.constdata)
+    UART0_DMA_Tx                             0x00003da8   Data           8  uart_lpc17xx.o(.constdata)
+    UART0_DMA_Rx                             0x00003db0   Data           8  uart_lpc17xx.o(.constdata)
+    USART0_Resources                         0x00003db8   Data         100  uart_lpc17xx.o(.constdata)
     STACK                                    0x10000000   Section     2048  startup_lpc17xx.o(STACK)
     Stack_Mem                                0x10000000   Data        2048  startup_lpc17xx.o(STACK)
     __initial_sp                             0x10000800   Data           0  startup_lpc17xx.o(STACK)
@@ -951,33 +951,33 @@ Image Symbol Table
     draw_char                                0x00002747   Thumb Code   136  lcdcontrol.o(i.draw_char)
     draw_horizontal                          0x000027cf   Thumb Code    48  lcdcontrol.o(i.draw_horizontal)
     draw_point                               0x000027ff   Thumb Code    26  lcdcontrol.o(i.draw_point)
-    draw_string                              0x00002819   Thumb Code    60  lcdcontrol.o(i.draw_string)
-    draw_traces                              0x00002855   Thumb Code    72  lcdcontrol.o(i.draw_traces)
-    draw_vertical                            0x0000289d   Thumb Code    46  lcdcontrol.o(i.draw_vertical)
-    edge_trigger                             0x000028cb   Thumb Code    18  trigger.o(i.edge_trigger)
-    fill                                     0x000028dd   Thumb Code    38  lcdcontrol.o(i.fill)
-    get_joystick_state                       0x00002905   Thumb Code   102  control.o(i.get_joystick_state)
-    get_mv                                   0x00002971   Thumb Code    20  adc.o(i.get_mv)
-    handle_draw                              0x00002989   Thumb Code    52  adc.o(i.handle_draw)
-    init_ILI9325                             0x000029c5   Thumb Code   468  lcd_ili9325.o(i.init_ILI9325)
-    init_adc                                 0x00002b99   Thumb Code   112  adc.o(i.init_adc)
-    init_control                             0x00002c21   Thumb Code   136  control.o(i.init_control)
-    init_lcd                                 0x00002cb9   Thumb Code   114  lcdcontrol.o(i.init_lcd)
-    init_tim0                                0x00002d2d   Thumb Code    48  adc.o(i.init_tim0)
-    init_uart                                0x00002d65   Thumb Code    62  control.o(i.init_uart)
-    lcdConfiguration                         0x00002dd1   Thumb Code    36  open1768_lcd.o(i.lcdConfiguration)
-    lcdSend                                  0x00002df9   Thumb Code    40  open1768_lcd.o(i.lcdSend)
-    lcdSetCursor                             0x00002e25   Thumb Code    24  open1768_lcd.o(i.lcdSetCursor)
-    lcdWriteData                             0x00002e3d   Thumb Code    50  open1768_lcd.o(i.lcdWriteData)
-    lcdWriteIndex                            0x00002e75   Thumb Code    60  open1768_lcd.o(i.lcdWriteIndex)
-    lcdWriteReg                              0x00002eb5   Thumb Code    20  open1768_lcd.o(i.lcdWriteReg)
-    loop                                     0x00002ec9   Thumb Code    16  main.o(i.loop)
-    main                                     0x00002ed9   Thumb Code    12  main.o(i.main)
-    setup                                    0x00002ee5   Thumb Code    40  main.o(i.setup)
-    wait_delay                               0x00003089   Thumb Code    18  open1768_lcd.o(i.wait_delay)
-    Driver_USART0                            0x00003e24   Data          56  uart_lpc17xx.o(.constdata)
-    Region$$Table$$Base                      0x00003e5c   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x00003e8c   Number         0  anon$$obj.o(Region$$Table)
+    draw_string                              0x00002819   Thumb Code    52  lcdcontrol.o(i.draw_string)
+    draw_traces                              0x0000284d   Thumb Code    72  lcdcontrol.o(i.draw_traces)
+    draw_vertical                            0x00002895   Thumb Code    46  lcdcontrol.o(i.draw_vertical)
+    edge_trigger                             0x000028c3   Thumb Code    18  trigger.o(i.edge_trigger)
+    fill                                     0x000028d5   Thumb Code    38  lcdcontrol.o(i.fill)
+    get_joystick_state                       0x000028fd   Thumb Code   102  control.o(i.get_joystick_state)
+    get_mv                                   0x00002969   Thumb Code    20  adc.o(i.get_mv)
+    handle_draw                              0x00002981   Thumb Code    52  adc.o(i.handle_draw)
+    init_ILI9325                             0x000029bd   Thumb Code   468  lcd_ili9325.o(i.init_ILI9325)
+    init_adc                                 0x00002b91   Thumb Code   112  adc.o(i.init_adc)
+    init_control                             0x00002c19   Thumb Code   136  control.o(i.init_control)
+    init_lcd                                 0x00002cb1   Thumb Code   114  lcdcontrol.o(i.init_lcd)
+    init_tim0                                0x00002d25   Thumb Code    48  adc.o(i.init_tim0)
+    init_uart                                0x00002d5d   Thumb Code    62  control.o(i.init_uart)
+    lcdConfiguration                         0x00002dc9   Thumb Code    36  open1768_lcd.o(i.lcdConfiguration)
+    lcdSend                                  0x00002df1   Thumb Code    40  open1768_lcd.o(i.lcdSend)
+    lcdSetCursor                             0x00002e1d   Thumb Code    24  open1768_lcd.o(i.lcdSetCursor)
+    lcdWriteData                             0x00002e35   Thumb Code    50  open1768_lcd.o(i.lcdWriteData)
+    lcdWriteIndex                            0x00002e6d   Thumb Code    60  open1768_lcd.o(i.lcdWriteIndex)
+    lcdWriteReg                              0x00002ead   Thumb Code    20  open1768_lcd.o(i.lcdWriteReg)
+    loop                                     0x00002ec1   Thumb Code    16  main.o(i.loop)
+    main                                     0x00002ed1   Thumb Code    12  main.o(i.main)
+    setup                                    0x00002edd   Thumb Code    40  main.o(i.setup)
+    wait_delay                               0x00003081   Thumb Code    18  open1768_lcd.o(i.wait_delay)
+    Driver_USART0                            0x00003e1c   Data          56  uart_lpc17xx.o(.constdata)
+    Region$$Table$$Base                      0x00003e54   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00003e84   Number         0  anon$$obj.o(Region$$Table)
     do_draw                                  0x2007c000   Data           1  adc.o(.data)
     uart                                     0x2007c014   Data           4  control.o(.data)
     SystemCoreClock                          0x2007c020   Data           4  system_lpc17xx.o(.data)
@@ -994,209 +994,209 @@ Memory Map of the image
 
   Image Entry point : 0x000000cd
 
-  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00003eb0, Max: 0x00080000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00003ea8, Max: 0x00080000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00003e8c, Max: 0x00080000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00003e84, Max: 0x00080000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x00000000   0x00000000   0x000000cc   Data   RO          945    RESET               startup_lpc17xx.o
-    0x000000cc   0x000000cc   0x00000008   Code   RO         1029  * !!!main             c_w.l(__main.o)
-    0x000000d4   0x000000d4   0x00000034   Code   RO         1207    !!!scatter          c_w.l(__scatter.o)
-    0x00000108   0x00000108   0x0000001a   Code   RO         1209    !!handler_copy      c_w.l(__scatter_copy.o)
+    0x00000000   0x00000000   0x000000cc   Data   RO          948    RESET               startup_lpc17xx.o
+    0x000000cc   0x000000cc   0x00000008   Code   RO         1032  * !!!main             c_w.l(__main.o)
+    0x000000d4   0x000000d4   0x00000034   Code   RO         1210    !!!scatter          c_w.l(__scatter.o)
+    0x00000108   0x00000108   0x0000001a   Code   RO         1212    !!handler_copy      c_w.l(__scatter_copy.o)
     0x00000122   0x00000122   0x00000002   PAD
-    0x00000124   0x00000124   0x0000001c   Code   RO         1211    !!handler_zi        c_w.l(__scatter_zi.o)
-    0x00000140   0x00000140   0x00000000   Code   RO         1022    .ARM.Collect$$_printf_percent$$00000000  c_w.l(_printf_percent.o)
-    0x00000140   0x00000140   0x00000006   Code   RO         1021    .ARM.Collect$$_printf_percent$$0000000A  c_w.l(_printf_u.o)
-    0x00000146   0x00000146   0x00000004   Code   RO         1042    .ARM.Collect$$_printf_percent$$00000017  c_w.l(_printf_percent_end.o)
-    0x0000014a   0x0000014a   0x00000002   Code   RO         1077    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
-    0x0000014c   0x0000014c   0x00000000   Code   RO         1090    .ARM.Collect$$libinit$$00000002  c_w.l(libinit2.o)
-    0x0000014c   0x0000014c   0x00000000   Code   RO         1092    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
-    0x0000014c   0x0000014c   0x00000000   Code   RO         1095    .ARM.Collect$$libinit$$0000000A  c_w.l(libinit2.o)
-    0x0000014c   0x0000014c   0x00000000   Code   RO         1097    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
-    0x0000014c   0x0000014c   0x00000000   Code   RO         1099    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
-    0x0000014c   0x0000014c   0x00000000   Code   RO         1102    .ARM.Collect$$libinit$$00000011  c_w.l(libinit2.o)
-    0x0000014c   0x0000014c   0x00000000   Code   RO         1104    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
-    0x0000014c   0x0000014c   0x00000000   Code   RO         1106    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
-    0x0000014c   0x0000014c   0x00000000   Code   RO         1108    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
-    0x0000014c   0x0000014c   0x00000000   Code   RO         1110    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
-    0x0000014c   0x0000014c   0x00000000   Code   RO         1112    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
-    0x0000014c   0x0000014c   0x00000000   Code   RO         1114    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
-    0x0000014c   0x0000014c   0x00000000   Code   RO         1116    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
-    0x0000014c   0x0000014c   0x00000000   Code   RO         1118    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
-    0x0000014c   0x0000014c   0x00000000   Code   RO         1120    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
-    0x0000014c   0x0000014c   0x00000000   Code   RO         1122    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
-    0x0000014c   0x0000014c   0x00000000   Code   RO         1126    .ARM.Collect$$libinit$$0000002C  c_w.l(libinit2.o)
-    0x0000014c   0x0000014c   0x00000000   Code   RO         1128    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
-    0x0000014c   0x0000014c   0x00000000   Code   RO         1130    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
-    0x0000014c   0x0000014c   0x00000000   Code   RO         1132    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
-    0x0000014c   0x0000014c   0x00000002   Code   RO         1133    .ARM.Collect$$libinit$$00000033  c_w.l(libinit2.o)
-    0x0000014e   0x0000014e   0x00000002   Code   RO         1164    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
-    0x00000150   0x00000150   0x00000000   Code   RO         1190    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
-    0x00000150   0x00000150   0x00000000   Code   RO         1192    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
-    0x00000150   0x00000150   0x00000000   Code   RO         1195    .ARM.Collect$$libshutdown$$00000007  c_w.l(libshutdown2.o)
-    0x00000150   0x00000150   0x00000000   Code   RO         1198    .ARM.Collect$$libshutdown$$0000000A  c_w.l(libshutdown2.o)
-    0x00000150   0x00000150   0x00000000   Code   RO         1200    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
-    0x00000150   0x00000150   0x00000000   Code   RO         1203    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
-    0x00000150   0x00000150   0x00000002   Code   RO         1204    .ARM.Collect$$libshutdown$$00000010  c_w.l(libshutdown2.o)
-    0x00000152   0x00000152   0x00000000   Code   RO         1031    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
-    0x00000152   0x00000152   0x00000000   Code   RO         1046    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
-    0x00000152   0x00000152   0x00000006   Code   RO         1058    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
-    0x00000158   0x00000158   0x00000000   Code   RO         1048    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
-    0x00000158   0x00000158   0x00000004   Code   RO         1049    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
-    0x0000015c   0x0000015c   0x00000000   Code   RO         1051    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
-    0x0000015c   0x0000015c   0x00000008   Code   RO         1052    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
-    0x00000164   0x00000164   0x00000002   Code   RO         1081    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
-    0x00000166   0x00000166   0x00000000   Code   RO         1137    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
-    0x00000166   0x00000166   0x00000004   Code   RO         1138    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
-    0x0000016a   0x0000016a   0x00000006   Code   RO         1139    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
-    0x00000170   0x00000170   0x0000003c   Code   RO          947    .text               startup_lpc17xx.o
-    0x000001ac   0x000001ac   0x000000ee   Code   RO          991    .text               c_w.l(lludivv7m.o)
+    0x00000124   0x00000124   0x0000001c   Code   RO         1214    !!handler_zi        c_w.l(__scatter_zi.o)
+    0x00000140   0x00000140   0x00000000   Code   RO         1025    .ARM.Collect$$_printf_percent$$00000000  c_w.l(_printf_percent.o)
+    0x00000140   0x00000140   0x00000006   Code   RO         1024    .ARM.Collect$$_printf_percent$$0000000A  c_w.l(_printf_u.o)
+    0x00000146   0x00000146   0x00000004   Code   RO         1045    .ARM.Collect$$_printf_percent$$00000017  c_w.l(_printf_percent_end.o)
+    0x0000014a   0x0000014a   0x00000002   Code   RO         1080    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
+    0x0000014c   0x0000014c   0x00000000   Code   RO         1093    .ARM.Collect$$libinit$$00000002  c_w.l(libinit2.o)
+    0x0000014c   0x0000014c   0x00000000   Code   RO         1095    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
+    0x0000014c   0x0000014c   0x00000000   Code   RO         1098    .ARM.Collect$$libinit$$0000000A  c_w.l(libinit2.o)
+    0x0000014c   0x0000014c   0x00000000   Code   RO         1100    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
+    0x0000014c   0x0000014c   0x00000000   Code   RO         1102    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
+    0x0000014c   0x0000014c   0x00000000   Code   RO         1105    .ARM.Collect$$libinit$$00000011  c_w.l(libinit2.o)
+    0x0000014c   0x0000014c   0x00000000   Code   RO         1107    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
+    0x0000014c   0x0000014c   0x00000000   Code   RO         1109    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
+    0x0000014c   0x0000014c   0x00000000   Code   RO         1111    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
+    0x0000014c   0x0000014c   0x00000000   Code   RO         1113    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
+    0x0000014c   0x0000014c   0x00000000   Code   RO         1115    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
+    0x0000014c   0x0000014c   0x00000000   Code   RO         1117    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
+    0x0000014c   0x0000014c   0x00000000   Code   RO         1119    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
+    0x0000014c   0x0000014c   0x00000000   Code   RO         1121    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
+    0x0000014c   0x0000014c   0x00000000   Code   RO         1123    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
+    0x0000014c   0x0000014c   0x00000000   Code   RO         1125    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
+    0x0000014c   0x0000014c   0x00000000   Code   RO         1129    .ARM.Collect$$libinit$$0000002C  c_w.l(libinit2.o)
+    0x0000014c   0x0000014c   0x00000000   Code   RO         1131    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
+    0x0000014c   0x0000014c   0x00000000   Code   RO         1133    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
+    0x0000014c   0x0000014c   0x00000000   Code   RO         1135    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
+    0x0000014c   0x0000014c   0x00000002   Code   RO         1136    .ARM.Collect$$libinit$$00000033  c_w.l(libinit2.o)
+    0x0000014e   0x0000014e   0x00000002   Code   RO         1167    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
+    0x00000150   0x00000150   0x00000000   Code   RO         1193    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
+    0x00000150   0x00000150   0x00000000   Code   RO         1195    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
+    0x00000150   0x00000150   0x00000000   Code   RO         1198    .ARM.Collect$$libshutdown$$00000007  c_w.l(libshutdown2.o)
+    0x00000150   0x00000150   0x00000000   Code   RO         1201    .ARM.Collect$$libshutdown$$0000000A  c_w.l(libshutdown2.o)
+    0x00000150   0x00000150   0x00000000   Code   RO         1203    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
+    0x00000150   0x00000150   0x00000000   Code   RO         1206    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
+    0x00000150   0x00000150   0x00000002   Code   RO         1207    .ARM.Collect$$libshutdown$$00000010  c_w.l(libshutdown2.o)
+    0x00000152   0x00000152   0x00000000   Code   RO         1034    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
+    0x00000152   0x00000152   0x00000000   Code   RO         1049    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
+    0x00000152   0x00000152   0x00000006   Code   RO         1061    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
+    0x00000158   0x00000158   0x00000000   Code   RO         1051    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
+    0x00000158   0x00000158   0x00000004   Code   RO         1052    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
+    0x0000015c   0x0000015c   0x00000000   Code   RO         1054    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
+    0x0000015c   0x0000015c   0x00000008   Code   RO         1055    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
+    0x00000164   0x00000164   0x00000002   Code   RO         1084    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
+    0x00000166   0x00000166   0x00000000   Code   RO         1140    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
+    0x00000166   0x00000166   0x00000004   Code   RO         1141    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
+    0x0000016a   0x0000016a   0x00000006   Code   RO         1142    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
+    0x00000170   0x00000170   0x0000003c   Code   RO          950    .text               startup_lpc17xx.o
+    0x000001ac   0x000001ac   0x000000ee   Code   RO          994    .text               c_w.l(lludivv7m.o)
     0x0000029a   0x0000029a   0x00000002   PAD
-    0x0000029c   0x0000029c   0x0000002c   Code   RO          993    .text               c_w.l(__2sprintf.o)
-    0x000002c8   0x000002c8   0x00000006   Code   RO         1027    .text               c_w.l(heapauxi.o)
-    0x000002ce   0x000002ce   0x0000000a   Code   RO         1040    .text               c_w.l(_sputc.o)
-    0x000002d8   0x000002d8   0x00000012   Code   RO         1066    .text               c_w.l(exit.o)
+    0x0000029c   0x0000029c   0x0000002c   Code   RO          996    .text               c_w.l(__2sprintf.o)
+    0x000002c8   0x000002c8   0x00000006   Code   RO         1030    .text               c_w.l(heapauxi.o)
+    0x000002ce   0x000002ce   0x0000000a   Code   RO         1043    .text               c_w.l(_sputc.o)
+    0x000002d8   0x000002d8   0x00000012   Code   RO         1069    .text               c_w.l(exit.o)
     0x000002ea   0x000002ea   0x00000002   PAD
-    0x000002ec   0x000002ec   0x00000008   Code   RO         1078    .text               c_w.l(libspace.o)
-    0x000002f4   0x000002f4   0x00000002   Code   RO         1153    .text               c_w.l(use_no_semi.o)
-    0x000002f6   0x000002f6   0x00000000   Code   RO         1155    .text               c_w.l(indicate_semi.o)
-    0x000002f6   0x000002f6   0x00000006   Code   RO          559    i.USART_GetCapabilities  uart_lpc17xx.o
-    0x000002fc   0x000002fc   0x00000004   Code   RO          946    .ARM.__at_0x02FC    startup_lpc17xx.o
-    0x00000300   0x00000300   0x00000068   Code   RO          997    .text               c_w.l(__printf.o)
-    0x00000368   0x00000368   0x00000078   Code   RO          999    .text               c_w.l(_printf_dec.o)
-    0x000003e0   0x000003e0   0x0000008a   Code   RO         1023    .text               c_w.l(rt_memcpy_v6.o)
-    0x0000046a   0x0000046a   0x0000004e   Code   RO         1025    .text               c_w.l(rt_memclr_w.o)
-    0x000004b8   0x000004b8   0x000000b2   Code   RO         1036    .text               c_w.l(_printf_intcommon.o)
+    0x000002ec   0x000002ec   0x00000008   Code   RO         1081    .text               c_w.l(libspace.o)
+    0x000002f4   0x000002f4   0x00000002   Code   RO         1156    .text               c_w.l(use_no_semi.o)
+    0x000002f6   0x000002f6   0x00000000   Code   RO         1158    .text               c_w.l(indicate_semi.o)
+    0x000002f6   0x000002f6   0x00000006   Code   RO          562    i.USART_GetCapabilities  uart_lpc17xx.o
+    0x000002fc   0x000002fc   0x00000004   Code   RO          949    .ARM.__at_0x02FC    startup_lpc17xx.o
+    0x00000300   0x00000300   0x00000068   Code   RO         1000    .text               c_w.l(__printf.o)
+    0x00000368   0x00000368   0x00000078   Code   RO         1002    .text               c_w.l(_printf_dec.o)
+    0x000003e0   0x000003e0   0x0000008a   Code   RO         1026    .text               c_w.l(rt_memcpy_v6.o)
+    0x0000046a   0x0000046a   0x0000004e   Code   RO         1028    .text               c_w.l(rt_memclr_w.o)
+    0x000004b8   0x000004b8   0x000000b2   Code   RO         1039    .text               c_w.l(_printf_intcommon.o)
     0x0000056a   0x0000056a   0x00000002   PAD
-    0x0000056c   0x0000056c   0x00000030   Code   RO         1038    .text               c_w.l(_printf_char_common.o)
-    0x0000059c   0x0000059c   0x00000064   Code   RO         1043    .text               c_w.l(rt_memcpy_w.o)
-    0x00000600   0x00000600   0x0000004a   Code   RO         1064    .text               c_w.l(sys_stackheap_outer.o)
+    0x0000056c   0x0000056c   0x00000030   Code   RO         1041    .text               c_w.l(_printf_char_common.o)
+    0x0000059c   0x0000059c   0x00000064   Code   RO         1046    .text               c_w.l(rt_memcpy_w.o)
+    0x00000600   0x00000600   0x0000004a   Code   RO         1067    .text               c_w.l(sys_stackheap_outer.o)
     0x0000064a   0x0000064a   0x00000002   PAD
-    0x0000064c   0x0000064c   0x0000000c   Code   RO         1134    .text               c_w.l(sys_exit.o)
-    0x00000658   0x00000658   0x000000c8   Code   RO          331    i.ADC_IRQHandler    adc.o
-    0x00000720   0x00000720   0x00000020   Code   RO          766    i.Clear_Channel_active_flag  gpdma_lpc17xx.o
-    0x00000740   0x00000740   0x00000180   Code   RO          767    i.DMA_IRQHandler    gpdma_lpc17xx.o
-    0x000008c0   0x000008c0   0x000000e8   Code   RO          388    i.EINT3_IRQHandler  control.o
-    0x000009a8   0x000009a8   0x000000f4   Code   RO          768    i.GPDMA_ChannelConfigure  gpdma_lpc17xx.o
-    0x00000a9c   0x00000a9c   0x00000030   Code   RO          769    i.GPDMA_ChannelDisable  gpdma_lpc17xx.o
-    0x00000acc   0x00000acc   0x00000030   Code   RO          771    i.GPDMA_ChannelGetCount  gpdma_lpc17xx.o
-    0x00000afc   0x00000afc   0x000000a8   Code   RO          773    i.GPDMA_Initialize  gpdma_lpc17xx.o
-    0x00000ba4   0x00000ba4   0x00000044   Code   RO          774    i.GPDMA_PeripheralSelect  gpdma_lpc17xx.o
-    0x00000be8   0x00000be8   0x00000080   Code   RO          775    i.GPDMA_Uninitialize  gpdma_lpc17xx.o
-    0x00000c68   0x00000c68   0x00000020   Code   RO          856    i.GPIO_PinRead      gpio_lpc17xx.o
-    0x00000c88   0x00000c88   0x00000028   Code   RO          857    i.GPIO_PinWrite     gpio_lpc17xx.o
-    0x00000cb0   0x00000cb0   0x0000002c   Code   RO          858    i.GPIO_PortClock    gpio_lpc17xx.o
-    0x00000cdc   0x00000cdc   0x00000038   Code   RO          861    i.GPIO_SetDir       gpio_lpc17xx.o
-    0x00000d14   0x00000d14   0x0000002c   Code   RO          460    i.GetASCIICode      asciilib.o
-    0x00000d40   0x00000d40   0x00000044   Code   RO          539    i.GetUsartClockFreq  uart_lpc17xx.o
-    0x00000d84   0x00000d84   0x0000005c   Code   RO          484    i.LED_Initialize    led_open1768.o
-    0x00000de0   0x00000de0   0x0000002c   Code   RO          485    i.LED_Off           led_open1768.o
-    0x00000e0c   0x00000e0c   0x0000002c   Code   RO          486    i.LED_On            led_open1768.o
-    0x00000e38   0x00000e38   0x00000028   Code   RO          487    i.LED_SetOut        led_open1768.o
-    0x00000e60   0x00000e60   0x000000fc   Code   RO          910    i.PIN_Configure     pin_lpc17xx.o
-    0x00000f5c   0x00000f5c   0x00000038   Code   RO          776    i.Set_Channel_active_flag  gpdma_lpc17xx.o
-    0x00000f94   0x00000f94   0x00000140   Code   RO          957    i.SystemInit        system_lpc17xx.o
-    0x000010d4   0x000010d4   0x00000010   Code   RO          540    i.UART0_IRQHandler  uart_lpc17xx.o
-    0x000010e4   0x000010e4   0x00000018   Code   RO          541    i.USART0_Control    uart_lpc17xx.o
-    0x000010fc   0x000010fc   0x00000014   Code   RO          542    i.USART0_GPDMA_Rx_Event  uart_lpc17xx.o
-    0x00001110   0x00001110   0x00000014   Code   RO          543    i.USART0_GPDMA_Tx_Event  uart_lpc17xx.o
-    0x00001124   0x00001124   0x00000010   Code   RO          544    i.USART0_GetCapabilities  uart_lpc17xx.o
-    0x00001134   0x00001134   0x00000010   Code   RO          545    i.USART0_GetModemStatus  uart_lpc17xx.o
-    0x00001144   0x00001144   0x00000010   Code   RO          546    i.USART0_GetRxCount  uart_lpc17xx.o
-    0x00001154   0x00001154   0x00000010   Code   RO          547    i.USART0_GetStatus  uart_lpc17xx.o
-    0x00001164   0x00001164   0x00000010   Code   RO          548    i.USART0_GetTxCount  uart_lpc17xx.o
-    0x00001174   0x00001174   0x00000014   Code   RO          549    i.USART0_Initialize  uart_lpc17xx.o
-    0x00001188   0x00001188   0x00000014   Code   RO          550    i.USART0_PowerControl  uart_lpc17xx.o
-    0x0000119c   0x0000119c   0x00000018   Code   RO          551    i.USART0_Receive    uart_lpc17xx.o
-    0x000011b4   0x000011b4   0x00000018   Code   RO          552    i.USART0_Send       uart_lpc17xx.o
-    0x000011cc   0x000011cc   0x00000014   Code   RO          553    i.USART0_SetModemControl  uart_lpc17xx.o
-    0x000011e0   0x000011e0   0x0000001c   Code   RO          554    i.USART0_Transfer   uart_lpc17xx.o
-    0x000011fc   0x000011fc   0x00000010   Code   RO          555    i.USART0_Uninitialize  uart_lpc17xx.o
-    0x0000120c   0x0000120c   0x00000644   Code   RO          556    i.USART_Control     uart_lpc17xx.o
-    0x00001850   0x00001850   0x00000086   Code   RO          557    i.USART_GPDMA_Rx_Event  uart_lpc17xx.o
-    0x000018d6   0x000018d6   0x0000004a   Code   RO          558    i.USART_GPDMA_Tx_Event  uart_lpc17xx.o
-    0x00001920   0x00001920   0x000000ec   Code   RO          560    i.USART_GetModemStatus  uart_lpc17xx.o
-    0x00001a0c   0x00001a0c   0x0000001c   Code   RO          561    i.USART_GetRxCount  uart_lpc17xx.o
-    0x00001a28   0x00001a28   0x000000bc   Code   RO          562    i.USART_GetStatus   uart_lpc17xx.o
-    0x00001ae4   0x00001ae4   0x0000001c   Code   RO          563    i.USART_GetTxCount  uart_lpc17xx.o
-    0x00001b00   0x00001b00   0x0000021a   Code   RO          564    i.USART_IRQHandler  uart_lpc17xx.o
-    0x00001d1a   0x00001d1a   0x000000fe   Code   RO          565    i.USART_Initialize  uart_lpc17xx.o
-    0x00001e18   0x00001e18   0x00000238   Code   RO          566    i.USART_PowerControl  uart_lpc17xx.o
-    0x00002050   0x00002050   0x00000110   Code   RO          567    i.USART_Receive     uart_lpc17xx.o
-    0x00002160   0x00002160   0x00000068   Code   RO          568    i.USART_RxLineIntHandler  uart_lpc17xx.o
-    0x000021c8   0x000021c8   0x0000019c   Code   RO          569    i.USART_Send        uart_lpc17xx.o
-    0x00002364   0x00002364   0x00000134   Code   RO          570    i.USART_SetBaudrate  uart_lpc17xx.o
-    0x00002498   0x00002498   0x000000a0   Code   RO          571    i.USART_SetModemControl  uart_lpc17xx.o
-    0x00002538   0x00002538   0x0000007a   Code   RO          572    i.USART_Transfer    uart_lpc17xx.o
-    0x000025b2   0x000025b2   0x000000e2   Code   RO          573    i.USART_Uninitialize  uart_lpc17xx.o
-    0x00002694   0x00002694   0x00000010   Code   RO          574    i.USARTx_GetVersion  uart_lpc17xx.o
-    0x000026a4   0x000026a4   0x0000001c   Code   RO          575    i.__NVIC_ClearPendingIRQ  uart_lpc17xx.o
-    0x000026c0   0x000026c0   0x0000001c   Code   RO          777    i.__NVIC_ClearPendingIRQ  gpdma_lpc17xx.o
+    0x0000064c   0x0000064c   0x0000000c   Code   RO         1137    .text               c_w.l(sys_exit.o)
+    0x00000658   0x00000658   0x000000c8   Code   RO          337    i.ADC_IRQHandler    adc.o
+    0x00000720   0x00000720   0x00000020   Code   RO          769    i.Clear_Channel_active_flag  gpdma_lpc17xx.o
+    0x00000740   0x00000740   0x00000180   Code   RO          770    i.DMA_IRQHandler    gpdma_lpc17xx.o
+    0x000008c0   0x000008c0   0x000000e8   Code   RO          394    i.EINT3_IRQHandler  control.o
+    0x000009a8   0x000009a8   0x000000f4   Code   RO          771    i.GPDMA_ChannelConfigure  gpdma_lpc17xx.o
+    0x00000a9c   0x00000a9c   0x00000030   Code   RO          772    i.GPDMA_ChannelDisable  gpdma_lpc17xx.o
+    0x00000acc   0x00000acc   0x00000030   Code   RO          774    i.GPDMA_ChannelGetCount  gpdma_lpc17xx.o
+    0x00000afc   0x00000afc   0x000000a8   Code   RO          776    i.GPDMA_Initialize  gpdma_lpc17xx.o
+    0x00000ba4   0x00000ba4   0x00000044   Code   RO          777    i.GPDMA_PeripheralSelect  gpdma_lpc17xx.o
+    0x00000be8   0x00000be8   0x00000080   Code   RO          778    i.GPDMA_Uninitialize  gpdma_lpc17xx.o
+    0x00000c68   0x00000c68   0x00000020   Code   RO          859    i.GPIO_PinRead      gpio_lpc17xx.o
+    0x00000c88   0x00000c88   0x00000028   Code   RO          860    i.GPIO_PinWrite     gpio_lpc17xx.o
+    0x00000cb0   0x00000cb0   0x0000002c   Code   RO          861    i.GPIO_PortClock    gpio_lpc17xx.o
+    0x00000cdc   0x00000cdc   0x00000038   Code   RO          864    i.GPIO_SetDir       gpio_lpc17xx.o
+    0x00000d14   0x00000d14   0x0000002c   Code   RO          466    i.GetASCIICode      asciilib.o
+    0x00000d40   0x00000d40   0x00000044   Code   RO          542    i.GetUsartClockFreq  uart_lpc17xx.o
+    0x00000d84   0x00000d84   0x0000005c   Code   RO          487    i.LED_Initialize    led_open1768.o
+    0x00000de0   0x00000de0   0x0000002c   Code   RO          488    i.LED_Off           led_open1768.o
+    0x00000e0c   0x00000e0c   0x0000002c   Code   RO          489    i.LED_On            led_open1768.o
+    0x00000e38   0x00000e38   0x00000028   Code   RO          490    i.LED_SetOut        led_open1768.o
+    0x00000e60   0x00000e60   0x000000fc   Code   RO          913    i.PIN_Configure     pin_lpc17xx.o
+    0x00000f5c   0x00000f5c   0x00000038   Code   RO          779    i.Set_Channel_active_flag  gpdma_lpc17xx.o
+    0x00000f94   0x00000f94   0x00000140   Code   RO          960    i.SystemInit        system_lpc17xx.o
+    0x000010d4   0x000010d4   0x00000010   Code   RO          543    i.UART0_IRQHandler  uart_lpc17xx.o
+    0x000010e4   0x000010e4   0x00000018   Code   RO          544    i.USART0_Control    uart_lpc17xx.o
+    0x000010fc   0x000010fc   0x00000014   Code   RO          545    i.USART0_GPDMA_Rx_Event  uart_lpc17xx.o
+    0x00001110   0x00001110   0x00000014   Code   RO          546    i.USART0_GPDMA_Tx_Event  uart_lpc17xx.o
+    0x00001124   0x00001124   0x00000010   Code   RO          547    i.USART0_GetCapabilities  uart_lpc17xx.o
+    0x00001134   0x00001134   0x00000010   Code   RO          548    i.USART0_GetModemStatus  uart_lpc17xx.o
+    0x00001144   0x00001144   0x00000010   Code   RO          549    i.USART0_GetRxCount  uart_lpc17xx.o
+    0x00001154   0x00001154   0x00000010   Code   RO          550    i.USART0_GetStatus  uart_lpc17xx.o
+    0x00001164   0x00001164   0x00000010   Code   RO          551    i.USART0_GetTxCount  uart_lpc17xx.o
+    0x00001174   0x00001174   0x00000014   Code   RO          552    i.USART0_Initialize  uart_lpc17xx.o
+    0x00001188   0x00001188   0x00000014   Code   RO          553    i.USART0_PowerControl  uart_lpc17xx.o
+    0x0000119c   0x0000119c   0x00000018   Code   RO          554    i.USART0_Receive    uart_lpc17xx.o
+    0x000011b4   0x000011b4   0x00000018   Code   RO          555    i.USART0_Send       uart_lpc17xx.o
+    0x000011cc   0x000011cc   0x00000014   Code   RO          556    i.USART0_SetModemControl  uart_lpc17xx.o
+    0x000011e0   0x000011e0   0x0000001c   Code   RO          557    i.USART0_Transfer   uart_lpc17xx.o
+    0x000011fc   0x000011fc   0x00000010   Code   RO          558    i.USART0_Uninitialize  uart_lpc17xx.o
+    0x0000120c   0x0000120c   0x00000644   Code   RO          559    i.USART_Control     uart_lpc17xx.o
+    0x00001850   0x00001850   0x00000086   Code   RO          560    i.USART_GPDMA_Rx_Event  uart_lpc17xx.o
+    0x000018d6   0x000018d6   0x0000004a   Code   RO          561    i.USART_GPDMA_Tx_Event  uart_lpc17xx.o
+    0x00001920   0x00001920   0x000000ec   Code   RO          563    i.USART_GetModemStatus  uart_lpc17xx.o
+    0x00001a0c   0x00001a0c   0x0000001c   Code   RO          564    i.USART_GetRxCount  uart_lpc17xx.o
+    0x00001a28   0x00001a28   0x000000bc   Code   RO          565    i.USART_GetStatus   uart_lpc17xx.o
+    0x00001ae4   0x00001ae4   0x0000001c   Code   RO          566    i.USART_GetTxCount  uart_lpc17xx.o
+    0x00001b00   0x00001b00   0x0000021a   Code   RO          567    i.USART_IRQHandler  uart_lpc17xx.o
+    0x00001d1a   0x00001d1a   0x000000fe   Code   RO          568    i.USART_Initialize  uart_lpc17xx.o
+    0x00001e18   0x00001e18   0x00000238   Code   RO          569    i.USART_PowerControl  uart_lpc17xx.o
+    0x00002050   0x00002050   0x00000110   Code   RO          570    i.USART_Receive     uart_lpc17xx.o
+    0x00002160   0x00002160   0x00000068   Code   RO          571    i.USART_RxLineIntHandler  uart_lpc17xx.o
+    0x000021c8   0x000021c8   0x0000019c   Code   RO          572    i.USART_Send        uart_lpc17xx.o
+    0x00002364   0x00002364   0x00000134   Code   RO          573    i.USART_SetBaudrate  uart_lpc17xx.o
+    0x00002498   0x00002498   0x000000a0   Code   RO          574    i.USART_SetModemControl  uart_lpc17xx.o
+    0x00002538   0x00002538   0x0000007a   Code   RO          575    i.USART_Transfer    uart_lpc17xx.o
+    0x000025b2   0x000025b2   0x000000e2   Code   RO          576    i.USART_Uninitialize  uart_lpc17xx.o
+    0x00002694   0x00002694   0x00000010   Code   RO          577    i.USARTx_GetVersion  uart_lpc17xx.o
+    0x000026a4   0x000026a4   0x0000001c   Code   RO          578    i.__NVIC_ClearPendingIRQ  uart_lpc17xx.o
+    0x000026c0   0x000026c0   0x0000001c   Code   RO          780    i.__NVIC_ClearPendingIRQ  gpdma_lpc17xx.o
     0x000026dc   0x000026dc   0x0000002a   Code   RO          206    i.buff_append       buffer.o
     0x00002706   0x00002706   0x00000022   Code   RO          207    i.buff_clear        buffer.o
     0x00002728   0x00002728   0x0000001e   Code   RO           87    i.delay_ms          lcd_ili9325.o
     0x00002746   0x00002746   0x00000088   Code   RO          260    i.draw_char         lcdcontrol.o
     0x000027ce   0x000027ce   0x00000030   Code   RO          261    i.draw_horizontal   lcdcontrol.o
     0x000027fe   0x000027fe   0x0000001a   Code   RO          262    i.draw_point        lcdcontrol.o
-    0x00002818   0x00002818   0x0000003c   Code   RO          263    i.draw_string       lcdcontrol.o
-    0x00002854   0x00002854   0x00000048   Code   RO          264    i.draw_traces       lcdcontrol.o
-    0x0000289c   0x0000289c   0x0000002e   Code   RO          265    i.draw_vertical     lcdcontrol.o
-    0x000028ca   0x000028ca   0x00000012   Code   RO          236    i.edge_trigger      trigger.o
-    0x000028dc   0x000028dc   0x00000026   Code   RO          266    i.fill              lcdcontrol.o
-    0x00002902   0x00002902   0x00000002   PAD
-    0x00002904   0x00002904   0x0000006c   Code   RO          389    i.get_joystick_state  control.o
-    0x00002970   0x00002970   0x00000018   Code   RO          332    i.get_mv            adc.o
-    0x00002988   0x00002988   0x0000003c   Code   RO          333    i.handle_draw       adc.o
-    0x000029c4   0x000029c4   0x000001d4   Code   RO           88    i.init_ILI9325      lcd_ili9325.o
-    0x00002b98   0x00002b98   0x00000088   Code   RO          334    i.init_adc          adc.o
-    0x00002c20   0x00002c20   0x00000098   Code   RO          390    i.init_control      control.o
-    0x00002cb8   0x00002cb8   0x00000072   Code   RO          267    i.init_lcd          lcdcontrol.o
-    0x00002d2a   0x00002d2a   0x00000002   PAD
-    0x00002d2c   0x00002d2c   0x00000038   Code   RO          335    i.init_tim0         adc.o
-    0x00002d64   0x00002d64   0x0000004c   Code   RO          391    i.init_uart         control.o
-    0x00002db0   0x00002db0   0x00000020   Code   RO          268    i.is_on_grid        lcdcontrol.o
-    0x00002dd0   0x00002dd0   0x00000028   Code   RO          123    i.lcdConfiguration  open1768_lcd.o
-    0x00002df8   0x00002df8   0x0000002c   Code   RO          127    i.lcdSend           open1768_lcd.o
-    0x00002e24   0x00002e24   0x00000018   Code   RO          128    i.lcdSetCursor      open1768_lcd.o
-    0x00002e3c   0x00002e3c   0x00000038   Code   RO          129    i.lcdWriteData      open1768_lcd.o
-    0x00002e74   0x00002e74   0x00000040   Code   RO          130    i.lcdWriteIndex     open1768_lcd.o
-    0x00002eb4   0x00002eb4   0x00000014   Code   RO          131    i.lcdWriteReg       open1768_lcd.o
-    0x00002ec8   0x00002ec8   0x00000010   Code   RO            4    i.loop              main.o
-    0x00002ed8   0x00002ed8   0x0000000c   Code   RO            5    i.main              main.o
-    0x00002ee4   0x00002ee4   0x00000028   Code   RO            6    i.setup             main.o
-    0x00002f0c   0x00002f0c   0x0000017c   Code   RO          392    i.update_settings   control.o
-    0x00003088   0x00003088   0x00000012   Code   RO          189    i.wait_delay        open1768_lcd.o
-    0x0000309a   0x0000309a   0x00000006   Data   RO          394    .constdata          control.o
-    0x000030a0   0x000030a0   0x00000be0   Data   RO          461    .constdata          asciilib.o
-    0x00003c80   0x00003c80   0x00000008   Data   RO          489    .constdata          led_open1768.o
-    0x00003c88   0x00003c88   0x000001d4   Data   RO          577    .constdata          uart_lpc17xx.o
-    0x00003e5c   0x00003e5c   0x00000030   Data   RO         1205    Region$$Table       anon$$obj.o
+    0x00002818   0x00002818   0x00000034   Code   RO          263    i.draw_string       lcdcontrol.o
+    0x0000284c   0x0000284c   0x00000048   Code   RO          264    i.draw_traces       lcdcontrol.o
+    0x00002894   0x00002894   0x0000002e   Code   RO          265    i.draw_vertical     lcdcontrol.o
+    0x000028c2   0x000028c2   0x00000012   Code   RO          236    i.edge_trigger      trigger.o
+    0x000028d4   0x000028d4   0x00000026   Code   RO          266    i.fill              lcdcontrol.o
+    0x000028fa   0x000028fa   0x00000002   PAD
+    0x000028fc   0x000028fc   0x0000006c   Code   RO          395    i.get_joystick_state  control.o
+    0x00002968   0x00002968   0x00000018   Code   RO          338    i.get_mv            adc.o
+    0x00002980   0x00002980   0x0000003c   Code   RO          339    i.handle_draw       adc.o
+    0x000029bc   0x000029bc   0x000001d4   Code   RO           88    i.init_ILI9325      lcd_ili9325.o
+    0x00002b90   0x00002b90   0x00000088   Code   RO          340    i.init_adc          adc.o
+    0x00002c18   0x00002c18   0x00000098   Code   RO          396    i.init_control      control.o
+    0x00002cb0   0x00002cb0   0x00000072   Code   RO          267    i.init_lcd          lcdcontrol.o
+    0x00002d22   0x00002d22   0x00000002   PAD
+    0x00002d24   0x00002d24   0x00000038   Code   RO          341    i.init_tim0         adc.o
+    0x00002d5c   0x00002d5c   0x0000004c   Code   RO          397    i.init_uart         control.o
+    0x00002da8   0x00002da8   0x00000020   Code   RO          268    i.is_on_grid        lcdcontrol.o
+    0x00002dc8   0x00002dc8   0x00000028   Code   RO          123    i.lcdConfiguration  open1768_lcd.o
+    0x00002df0   0x00002df0   0x0000002c   Code   RO          127    i.lcdSend           open1768_lcd.o
+    0x00002e1c   0x00002e1c   0x00000018   Code   RO          128    i.lcdSetCursor      open1768_lcd.o
+    0x00002e34   0x00002e34   0x00000038   Code   RO          129    i.lcdWriteData      open1768_lcd.o
+    0x00002e6c   0x00002e6c   0x00000040   Code   RO          130    i.lcdWriteIndex     open1768_lcd.o
+    0x00002eac   0x00002eac   0x00000014   Code   RO          131    i.lcdWriteReg       open1768_lcd.o
+    0x00002ec0   0x00002ec0   0x00000010   Code   RO            4    i.loop              main.o
+    0x00002ed0   0x00002ed0   0x0000000c   Code   RO            5    i.main              main.o
+    0x00002edc   0x00002edc   0x00000028   Code   RO            6    i.setup             main.o
+    0x00002f04   0x00002f04   0x0000017c   Code   RO          398    i.update_settings   control.o
+    0x00003080   0x00003080   0x00000012   Code   RO          189    i.wait_delay        open1768_lcd.o
+    0x00003092   0x00003092   0x00000006   Data   RO          400    .constdata          control.o
+    0x00003098   0x00003098   0x00000be0   Data   RO          467    .constdata          asciilib.o
+    0x00003c78   0x00003c78   0x00000008   Data   RO          492    .constdata          led_open1768.o
+    0x00003c80   0x00003c80   0x000001d4   Data   RO          580    .constdata          uart_lpc17xx.o
+    0x00003e54   0x00003e54   0x00000030   Data   RO         1208    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x10000000, Load base: 0x00003e8c, Size: 0x00000800, Max: 0x00008000, ABSOLUTE)
-
-    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
-
-    0x10000000        -       0x00000800   Zero   RW          943    STACK               startup_lpc17xx.o
-
-
-    Execution Region RW_IRAM2 (Exec base: 0x2007c000, Load base: 0x00003e8c, Size: 0x00000668, Max: 0x00008000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x10000000, Load base: 0x00003e84, Size: 0x00000800, Max: 0x00008000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x2007c000   0x00003e8c   0x00000012   Data   RW          337    .data               adc.o
-    0x2007c012   0x00003e9e   0x00000002   PAD
-    0x2007c014   0x00003ea0   0x00000004   Data   RW          395    .data               control.o
-    0x2007c018   0x00003ea4   0x00000008   Data   RW          779    .data               gpdma_lpc17xx.o
-    0x2007c020   0x00003eac   0x00000004   Data   RW          958    .data               system_lpc17xx.o
-    0x2007c024        -       0x00000504   Zero   RW          336    .bss                adc.o
-    0x2007c528        -       0x0000000a   Zero   RW          393    .bss                control.o
-    0x2007c532   0x00003eb0   0x00000002   PAD
-    0x2007c534        -       0x00000034   Zero   RW          576    .bss                uart_lpc17xx.o
-    0x2007c568        -       0x000000a0   Zero   RW          778    .bss                gpdma_lpc17xx.o
-    0x2007c608        -       0x00000060   Zero   RW         1079    .bss                c_w.l(libspace.o)
-    0x2007c668        -       0x00000000   Zero   RW          944    HEAP                startup_lpc17xx.o
+    0x10000000        -       0x00000800   Zero   RW          946    STACK               startup_lpc17xx.o
+
+
+    Execution Region RW_IRAM2 (Exec base: 0x2007c000, Load base: 0x00003e84, Size: 0x00000668, Max: 0x00008000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x2007c000   0x00003e84   0x00000012   Data   RW          343    .data               adc.o
+    0x2007c012   0x00003e96   0x00000002   PAD
+    0x2007c014   0x00003e98   0x00000004   Data   RW          401    .data               control.o
+    0x2007c018   0x00003e9c   0x00000008   Data   RW          782    .data               gpdma_lpc17xx.o
+    0x2007c020   0x00003ea4   0x00000004   Data   RW          961    .data               system_lpc17xx.o
+    0x2007c024        -       0x00000504   Zero   RW          342    .bss                adc.o
+    0x2007c528        -       0x0000000a   Zero   RW          399    .bss                control.o
+    0x2007c532   0x00003ea8   0x00000002   PAD
+    0x2007c534        -       0x00000034   Zero   RW          579    .bss                uart_lpc17xx.o
+    0x2007c568        -       0x000000a0   Zero   RW          781    .bss                gpdma_lpc17xx.o
+    0x2007c608        -       0x00000060   Zero   RW         1082    .bss                c_w.l(libspace.o)
+    0x2007c668        -       0x00000000   Zero   RW          947    HEAP                startup_lpc17xx.o
 
 
 ==============================================================================
@@ -1213,7 +1213,7 @@ Image component sizes
       1204         94          0          8        160       8206   gpdma_lpc17xx.o
        172         18          0          0          0       2298   gpio_lpc17xx.o
        498          0          0          0          0       1090   lcd_ili9325.o
-       572          0          0          0          0       5745   lcdcontrol.o
+       564          0          0          0          0       5769   lcdcontrol.o
        220         12          8          0          0       3357   led_open1768.o
         68          0          0          0          0      22802   main.o
        266         18          0          0          0       3582   open1768_lcd.o
@@ -1224,7 +1224,7 @@ Image component sizes
       5686        150        468          0         52      63342   uart_lpc17xx.o
 
     ----------------------------------------------------------------------
-     10888        534       3774         36       3556     157309   Object Totals
+     10880        534       3774         36       3556     157333   Object Totals
          0          0         48          0          0          0   (incl. Generated)
          4          0          0          2          2          0   (incl. Padding)
 
@@ -1286,15 +1286,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     12238        578       3774         36       3652     153425   Grand Totals
-     12238        578       3774         36       3652     153425   ELF Image Totals
-     12238        578       3774         36          0          0   ROM Totals
+     12230        578       3774         36       3652     153449   Grand Totals
+     12230        578       3774         36       3652     153449   ELF Image Totals
+     12230        578       3774         36          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                16012 (  15.64kB)
+    Total RO  Size (Code + RO Data)                16004 (  15.63kB)
     Total RW  Size (RW Data + ZI Data)              3688 (   3.60kB)
-    Total ROM Size (Code + RO Data + RW Data)      16048 (  15.67kB)
+    Total ROM Size (Code + RO Data + RW Data)      16040 (  15.66kB)
 
 ==============================================================================
 
