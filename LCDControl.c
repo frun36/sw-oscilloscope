@@ -1,7 +1,5 @@
 #include "LCDControl.h"
 
-#define GRID_COLOR 0xEEEE
-
 void fill(uint16_t color) {
 	lcdSetCursor(0, 0);
 	lcdWriteIndex(DATA_RAM);

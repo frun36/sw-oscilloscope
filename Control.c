@@ -40,6 +40,11 @@ static void update_settings(uint16_t new_step, uint16_t new_vmax, uint16_t new_t
 		control.step, control.vmax, control.thresh, control.dt, control.dv);
 	uart->Send(buff, len);
 #endif
+
+	len = sprintf(buff, "dv=%u", control.dv);
+	draw_string(1, 1, buff, len, GRID_COLOR, 0);
+	len = sprintf(buff, "dt=%u", control.dt);
+	draw_string(1, 20, buff, len, GRID_COLOR, 0);
 }
 
 void init_control() {

@@ -4,6 +4,8 @@
 #include "LCD/Open1768_LCD.h"
 #include "LCD/LCD_ILI9325.h"
 
+#define GRID_COLOR 0xEEEE
+
 // Axes on the LCD are flipped
 #define SCOPE_MAX_X LCD_MAX_Y
 #define SCOPE_MAX_Y LCD_MAX_X
