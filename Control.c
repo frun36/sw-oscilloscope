@@ -9,7 +9,7 @@
 #include <stdio.h>
 
 #define MIN(a, b) ((a) < (b) ? (a) : (b))
-#define DEBUG
+// #define DEBUG
 
 
 static const uint8_t CONTROL_PINS[] = {8, 12, 13, 9, 11, 10};
@@ -34,9 +34,10 @@ static void update_settings(uint16_t new_step, uint16_t new_vmax, uint16_t new_t
 		draw_horizontal(MIN(control.thresh * SCOPE_MAX_Y / control.vmax, SCOPE_MAX_Y), 0xDD00);
 	}
 
+	char buff[64] = {};
+	uint32_t len;
 #ifdef DEBUG
-	char buff[128] = {};
-	uint32_t len = sprintf(buff, "st=%u;vm=%u;th=%u;dt=%u;dv=%u\r\n", 
+	len = sprintf(buff, "st=%u;vm=%u;th=%u;dt=%u;dv=%u\r\n", 
 		control.step, control.vmax, control.thresh, control.dt, control.dv);
 	uart->Send(buff, len);
 #endif

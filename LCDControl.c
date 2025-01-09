@@ -36,7 +36,7 @@ void draw_point(uint16_t x, uint16_t y, uint16_t color) {
 
 void draw_traces(uint16_t* buff, uint16_t* old, uint32_t size, uint16_t color) {
 	for (uint32_t i = 0; i < size; i++) {
-		draw_point(i, old[i], is_on_grid(i, old[i]) ? 0xFFFF : 0);
+		draw_point(i, old[i], is_on_grid(i, old[i]) ? GRID_COLOR : 0);
 		draw_point(i, buff[i], color);
 	}
 }
@@ -81,4 +81,9 @@ void draw_string(uint16_t x0, uint16_t y0, const char* str, uint16_t n, uint16_t
     for (uint16_t i = 0; i < n; i++) {
         draw_char(x0 + i * 8, y0, str[i], fg_color, bg_color);
     }
+	
+	lcdWriteReg(HADRPOS_RAM_START, 0);
+    lcdWriteReg(HADRPOS_RAM_END, LCD_MAX_X);
+    lcdWriteReg(VADRPOS_RAM_START, 0);
+    lcdWriteReg(VADRPOS_RAM_END, LCD_MAX_Y);
 }
