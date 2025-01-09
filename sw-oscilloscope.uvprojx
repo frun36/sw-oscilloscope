@@ -447,6 +447,11 @@
               <FileType>5</FileType>
               <FilePath>.\Control.h</FilePath>
             </File>
+            <File>
+              <FileName>asciiLib.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LCD\asciiLib.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
