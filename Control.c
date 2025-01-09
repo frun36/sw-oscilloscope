@@ -13,13 +13,19 @@ static const uint8_t CONTROL_PINS[] = {8, 12, 13, 9, 11, 10};
 Control control;
 
 static void update_settings(uint16_t new_step, uint16_t new_vmax, uint16_t new_thresh) {
-	control.step = new_step;
+	if (new_step != control.step) {
+		control.step = new_step;
+		control.dt = SCOPE_MAX_X / 2 * SAMPLE_US * new_step;
+	}
 	
 	if (control.vmax == new_vmax && new_thresh == control.thresh)
 		return;
 	
 	draw_horizontal(MIN(control.thresh * SCOPE_MAX_Y / control.vmax, SCOPE_MAX_Y), 0);
-	control.vmax = new_vmax;
+	if (new_vmax != control.vmax) {
+		control.vmax = new_vmax;
+		control.dv = new_vmax / 2;
+	}
 	control.thresh = new_thresh;
 	draw_horizontal(MIN(control.thresh * SCOPE_MAX_Y / control.vmax, SCOPE_MAX_Y), 0xDD00);
 }

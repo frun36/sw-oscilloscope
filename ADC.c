@@ -55,6 +55,15 @@ void handle_draw() {
 	LED_Off(3);
 }
 
+void init_tim0() {
+	LPC_TIM0->TCR = 0;
+	LPC_TIM0->TCR = 1;
+	LPC_TIM0->PR = 0;
+	LPC_TIM0->MR0 = SystemCoreClock / (8000000 / SAMPLE_US);
+	LPC_TIM0->MCR = 0b11;
+	LPC_TIM0->EMR |= (0b11 << 6); // When match occurs, toggle MAT0.1
+}
+
 void init_adc() {
 	LPC_SC->PCONP |= (1 << 12); 			// Enable ADC
 	LPC_ADC->ADCR = (1 << 1) 			| 	// ADC0.1

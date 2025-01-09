@@ -17,6 +17,7 @@
 
 void ADC_IRQHandler(void);
 
+void init_tim0();
 void init_adc(void);
 void handle_draw(void);
 
