@@ -1,15 +1,14 @@
 #ifndef _CONTROL_H_
 #define _CONTROL_H_
 
-#include "Board_Joystick.h"
 #include <stdint.h>
 
 typedef struct {
-	uint8_t v_range;
-	uint8_t t_range;
+	uint16_t step;
+	uint16_t vmax;
+	uint16_t thresh;
 } Control;
 
-extern Control control;
 void EINT3_IRQHandler(void);
 void init_control(void);
 

@@ -10,22 +10,18 @@
 
 static const uint8_t CONTROL_PINS[] = {8, 12, 13, 9, 11, 10};
 
-extern uint8_t triggered;
+Control control;
 
-uint16_t control_step;
-uint16_t control_vmax;
-uint16_t trigger_level;
-
-static void update_settings(uint16_t new_step, uint16_t new_vmax, uint16_t new_trigger_level) {
-	control_step = new_step;
+static void update_settings(uint16_t new_step, uint16_t new_vmax, uint16_t new_thresh) {
+	control.step = new_step;
 	
-	if (control_vmax == new_vmax && new_trigger_level == trigger_level)
+	if (control.vmax == new_vmax && new_thresh == control.thresh)
 		return;
 	
-	draw_horizontal(MIN(trigger_level * SCOPE_MAX_Y / control_vmax, SCOPE_MAX_Y), 0);
-	control_vmax = new_vmax;
-	trigger_level = new_trigger_level;
-	draw_horizontal(MIN(trigger_level * SCOPE_MAX_Y / control_vmax, SCOPE_MAX_Y), 0xDD00);
+	draw_horizontal(MIN(control.thresh * SCOPE_MAX_Y / control.vmax, SCOPE_MAX_Y), 0);
+	control.vmax = new_vmax;
+	control.thresh = new_thresh;
+	draw_horizontal(MIN(control.thresh * SCOPE_MAX_Y / control.vmax, SCOPE_MAX_Y), 0xDD00);
 }
 
 void init_control() {
@@ -78,25 +74,25 @@ void EINT3_IRQHandler() {
 
 	switch (get_joystick_state()) {
 		case RIGHT:
-			if (control_step > 1)
-				update_settings(control_step / 2, control_vmax, trigger_level);
+			if (control.step > 1)
+				update_settings(control.step / 2, control.vmax, control.thresh);
 			break;
 		case LEFT:
-			update_settings(control_step * 2, control_vmax, trigger_level);
+			update_settings(control.step * 2, control.vmax, control.thresh);
 			break;
 		case TOP:
-			if (control_vmax >= 300)
-				update_settings(control_step, control_vmax - 300, trigger_level);
+			if (control.vmax >= 300)
+				update_settings(control.step, control.vmax - 300, control.thresh);
 			break;
 		case BOTTOM:
-			update_settings(control_step, control_vmax + 300, trigger_level);
+			update_settings(control.step, control.vmax + 300, control.thresh);
 			break;
 		case KEY1:
-			if (trigger_level >= 300)
-				update_settings(control_step, control_vmax, trigger_level - 300);
+			if (control.thresh >= 300)
+				update_settings(control.step, control.vmax, control.thresh - 300);
 			break;
 		case KEY2:
-			update_settings(control_step, control_vmax, trigger_level + 300);
+			update_settings(control.step, control.vmax, control.thresh + 300);
 			break;
 		default:
 			break;

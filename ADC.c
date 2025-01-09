@@ -1,11 +1,10 @@
 #include "ADC.h"
+#include "Control.h"
 
 extern Buffer buff;
-extern uint8_t do_draw;
+uint8_t do_draw = 0;
 
-extern uint16_t control_step;
-extern uint16_t control_vmax;
-extern uint16_t trigger_level;
+extern Control control;
 
 uint16_t get_mv(uint32_t adc_val) {
 	static uint32_t diff = ADC_VMAX - ADC_VMIN;
@@ -24,21 +23,21 @@ void ADC_IRQHandler() {
 	counter++;
 	
 	uint16_t adc_val = (LPC_ADC->ADGDR >> 4) & 0xFFF; // Clears global interrupt flag
-  uint16_t mv = get_mv(adc_val);
+	uint16_t mv = get_mv(adc_val);
 	
 	if(counter % count_threshold == 0)
 		prev_mv = mv;
 	
 	if (!triggered)
-		triggered = edge_trigger(trigger_level, prev_mv, mv);
+		triggered = edge_trigger(control.thresh, prev_mv, mv);
 	
 	if(!triggered)
 		return;
 
-  if(counter % control_step != 0)
+  if(counter % control.step != 0)
     return;
 	
-	uint16_t scope_value = mv > control_vmax ? SCOPE_MAX_Y : mv * SCOPE_MAX_Y / control_vmax;
+	uint16_t scope_value = mv > control.vmax ? SCOPE_MAX_Y : mv * SCOPE_MAX_Y / control.vmax;
 	if(!buff_append(&buff, scope_value)) {
 		triggered = 0;
 		do_draw = 1;

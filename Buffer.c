@@ -1,5 +1,7 @@
 #include "Buffer.h"
 
+Buffer buff;
+
 uint8_t buff_append(Buffer* buff, uint16_t val) {
 	if (buff->size >= BUFF_CAPACITY)
 		return 0;

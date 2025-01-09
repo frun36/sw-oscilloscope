@@ -4,9 +4,6 @@
 #include "ADC.h"
 #include "Control.h"
 
-Buffer buff;
-uint8_t do_draw = 0;
-
 void init_tim0() {
 	// uint32_t us = 100; // 10 kHz sample rate
 	uint32_t us = 10;
