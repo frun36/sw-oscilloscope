@@ -16,5 +16,6 @@ typedef struct {
 
 void EINT3_IRQHandler(void);
 void init_control(void);
+void init_uart(void);
 
 #endif

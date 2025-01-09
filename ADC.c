@@ -1,7 +1,11 @@
 #include "ADC.h"
+#include "LPC17xx.h"
+#include "Buffer.h"
+#include "Trigger.h"
+#include "Board_LED.h"
 #include "Control.h"
 
-extern Buffer buff;
+Buffer buff;
 uint8_t do_draw = 0;
 
 extern Control control;

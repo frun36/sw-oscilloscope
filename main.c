@@ -12,6 +12,7 @@ void setup() {
 	init_tim0();
 	init_adc();
 	init_control();
+	init_uart();
 	
 	LED_SetOut(1);
 }
