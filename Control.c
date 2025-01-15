@@ -23,7 +23,7 @@ uint16_t get_trig_y() {
 static void update_settings(uint16_t new_step, uint16_t new_vmax, uint16_t new_thresh) {
 	if (new_step != control.step) {
 		control.step = new_step;
-		control.dt = SCOPE_MAX_X * SAMPLE_US * new_step;
+		control.dt = SCOPE_MAX_X / 2 * SAMPLE_US * new_step;
 	}
 	
 	if (control.vmax != new_vmax || new_thresh != control.thresh) {

@@ -3,7 +3,7 @@
 
 #include <stdint.h>
 
-#define SAMPLE_US 10 
+#define SAMPLE_US 20 
 
 typedef struct {
 	uint16_t step;

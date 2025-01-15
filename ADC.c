@@ -60,10 +60,9 @@ void handle_draw() {
 }
 
 void init_tim0() {
-	LPC_TIM0->TCR = 0;
 	LPC_TIM0->TCR = 1;
 	LPC_TIM0->PR = 0;
-	LPC_TIM0->MR0 = SystemCoreClock / (8000000 / SAMPLE_US);
+	LPC_TIM0->MR0 = SystemCoreClock * SAMPLE_US / 2000000;
 	LPC_TIM0->MCR = 0b11;
 	LPC_TIM0->EMR |= (0b11 << 6); // When match occurs, toggle MAT0.1
 }
@@ -72,7 +71,7 @@ void init_adc() {
 	LPC_SC->PCONP |= (1 << 12); 			// Enable ADC
 	LPC_ADC->ADCR = (1 << 1) 			| 	// ADC0.1
 									(1 << 21) 		| 	// ADC Operational
-									(5 << 8)  		| 	// Divide clock to 5 Mhz
+									(5 << 8)  		| 	// Divide clock to 10 Mhz
 									(0b100 << 24);  	// Start conversion on MAT0.1 rising edge (default, bit 27)
 	
 	LPC_PINCON->PINSEL1 |= (1 << 16); // P0.24 as ADC0.1
