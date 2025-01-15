@@ -60,30 +60,25 @@ void draw_vertical(uint16_t x, uint16_t color) {
 }
 
 void draw_char(uint16_t x0, uint16_t y0, unsigned char c, uint16_t fg_color, uint16_t bg_color) {
-    unsigned char buff[16];
-    GetASCIICode(0, buff, c);
-    lcdSetCursor(x0, y0);
-    lcdWriteReg(HADRPOS_RAM_START, x0);
-    lcdWriteReg(HADRPOS_RAM_END, x0 + 7);
-    lcdWriteReg(VADRPOS_RAM_START, y0);
-    lcdWriteReg(VADRPOS_RAM_END, y0 + 17);
+	unsigned char buff[16];
+	GetASCIICode(0, buff, c);
 
-    lcdWriteIndex(DATA_RAM);
-    for(uint16_t y = 0; y < 16; y++)
-        for(uint16_t x = 0; x < 8; x++)
-            if (buff[y] & (1 << (7 - x)))
-                lcdWriteData(fg_color);
-            else
-                lcdWriteData(bg_color);
+	uint16_t color;
+	uint16_t x;
+	uint16_t y;
+	for (uint16_t i = 0; i < 16; i++) {
+		for (uint16_t j = 0; j < 8; j++) {
+			color = (buff[i] & (1 << (7 - j))) ? fg_color : bg_color;
+			x = x0 + j;
+			y = y0 - i;
+			draw_point(x, y, color);
+		}
+	}
 }
 
 void draw_string(uint16_t x0, uint16_t y0, const char* str, uint16_t n, uint16_t fg_color, uint16_t bg_color) {
-    for (uint16_t i = 0; i < n; i++) {
-        draw_char(x0 + i * 8, y0, str[i], fg_color, bg_color);
-    }
+	for (uint16_t i = 0; i < n; i++) {
+		draw_char(x0 + i * 8, y0, str[i], fg_color, bg_color);
+	}
 	
-	lcdWriteReg(HADRPOS_RAM_START, 0);
-    lcdWriteReg(HADRPOS_RAM_END, LCD_MAX_X);
-    lcdWriteReg(VADRPOS_RAM_START, 0);
-    lcdWriteReg(VADRPOS_RAM_END, LCD_MAX_Y);
 }
