@@ -16,6 +16,10 @@ extern ARM_DRIVER_USART Driver_USART0;
 ARM_DRIVER_USART* uart = &Driver_USART0;
 Control control;
 
+uint16_t get_trig_y() {
+	return MIN(control.thresh * SCOPE_MAX_Y / control.vmax, SCOPE_MAX_Y);
+}
+
 static void update_settings(uint16_t new_step, uint16_t new_vmax, uint16_t new_thresh) {
 	if (new_step != control.step) {
 		control.step = new_step;
@@ -23,13 +27,13 @@ static void update_settings(uint16_t new_step, uint16_t new_vmax, uint16_t new_t
 	}
 	
 	if (control.vmax != new_vmax || new_thresh != control.thresh) {
-		draw_horizontal(MIN(control.thresh * SCOPE_MAX_Y / control.vmax, SCOPE_MAX_Y), 0);
+		draw_horizontal(get_trig_y(), 0);
 		if (new_vmax != control.vmax) {
 			control.vmax = new_vmax;
 			control.dv = new_vmax / 2;
 		}
 		control.thresh = new_thresh;
-		draw_horizontal(MIN(control.thresh * SCOPE_MAX_Y / control.vmax, SCOPE_MAX_Y), 0xDD00);
+		draw_horizontal(get_trig_y(), TRIG_COLOR);
 	}
 
 	char buff[64] = {};
@@ -40,10 +44,10 @@ static void update_settings(uint16_t new_step, uint16_t new_vmax, uint16_t new_t
 	uart->Send(buff, len);
 #endif
 
-	len = sprintf(buff, "dv=%7u", control.dv);
-	draw_string(1, SCOPE_MAX_Y - 1, buff, len, GRID_COLOR, 0);
-	len = sprintf(buff, "dt=%7u", control.dt);
-	draw_string(1, SCOPE_MAX_Y - 20, buff, len, GRID_COLOR, 0);
+	len = sprintf(buff, "dv=%5u mV", control.dv);
+	draw_string(1, SCOPE_MAX_Y + 18, buff, len, GRID_COLOR, 0);
+	len = sprintf(buff, "dt=%7u us", control.dt);
+	draw_string(SCOPE_MAX_X / 2 + 1, SCOPE_MAX_Y + 18, buff, len, GRID_COLOR, 0);
 }
 
 void init_control() {

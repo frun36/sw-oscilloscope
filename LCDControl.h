@@ -5,10 +5,11 @@
 #include "LCD/LCD_ILI9325.h"
 
 #define GRID_COLOR 0xEEEE
+#define TRIG_COLOR 0xDD00
 
 // Axes on the LCD are flipped
 #define SCOPE_MAX_X LCD_MAX_Y
-#define SCOPE_MAX_Y LCD_MAX_X
+#define SCOPE_MAX_Y (LCD_MAX_X - 20)
 
 void fill(uint16_t color);
 void init_lcd(void);

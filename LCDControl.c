@@ -1,4 +1,5 @@
 #include "LCDControl.h"
+#include "Control.h"
 #include "LCD/asciiLib.h"
 
 void fill(uint16_t color) {
@@ -22,11 +23,12 @@ void init_lcd() {
 	
 	draw_vertical(0, GRID_COLOR);
 	draw_vertical(SCOPE_MAX_X / 2, GRID_COLOR);
-	draw_vertical(SCOPE_MAX_X, GRID_COLOR);
+	draw_vertical(SCOPE_MAX_X - 1, GRID_COLOR);
 }
 
 static uint8_t is_on_grid(uint16_t x, uint16_t y) {
-	return x == 0 || x == SCOPE_MAX_X / 2 || x == SCOPE_MAX_X || y == 0 || y == SCOPE_MAX_Y / 2 || y == SCOPE_MAX_Y;
+	return	x == 0 || x == SCOPE_MAX_X / 2 || x == SCOPE_MAX_X - 1 || 
+					y == 0 || y == SCOPE_MAX_Y / 2 || y == SCOPE_MAX_Y;
 }
 
 void draw_point(uint16_t x, uint16_t y, uint16_t color) {
@@ -36,17 +38,14 @@ void draw_point(uint16_t x, uint16_t y, uint16_t color) {
 
 void draw_traces(uint16_t* buff, uint16_t* old, uint32_t size, uint16_t color) {
 	for (uint32_t i = 0; i < size; i++) {
-		draw_point(i, old[i], is_on_grid(i, old[i]) ? GRID_COLOR : 0);
+		draw_point(i, old[i], old[i] == get_trig_y() ? TRIG_COLOR : (is_on_grid(i, old[i]) ? GRID_COLOR : 0));
 		draw_point(i, buff[i], color);
 	}
 }
 
 void draw_horizontal(uint16_t y, uint16_t color) {
-	if (color == 0 && is_on_grid(1, y))
-		color = GRID_COLOR;
-
-	for (uint16_t i = 0; i < SCOPE_MAX_X; i++) {
-		draw_point(i, y, color);
+	for (uint16_t i = 1; i < SCOPE_MAX_X - 1; i++) {
+		draw_point(i, y, (color == 0 && is_on_grid(i, y)) ? GRID_COLOR : color);
 	}
 }
 
@@ -54,7 +53,7 @@ void draw_vertical(uint16_t x, uint16_t color) {
 	if (color == 0 && is_on_grid(x, 1))
 		color = GRID_COLOR;
 
-	for (uint16_t j = 0; j < SCOPE_MAX_Y; j++) {
+	for (uint16_t j = 0; j <= SCOPE_MAX_Y; j++) {
 		draw_point(x, j, color);
 	}
 }
