@@ -23,7 +23,7 @@ uint16_t get_trig_y() {
 static void update_settings(uint16_t new_step, uint16_t new_vmax, uint16_t new_thresh) {
 	if (new_step != control.step) {
 		control.step = new_step;
-		control.dt = SCOPE_MAX_X / 2 * SAMPLE_US * new_step;
+		control.dt = SCOPE_MAX_X * SAMPLE_US * new_step;
 	}
 	
 	if (control.vmax != new_vmax || new_thresh != control.thresh) {
@@ -38,11 +38,10 @@ static void update_settings(uint16_t new_step, uint16_t new_vmax, uint16_t new_t
 
 	char buff[64] = {};
 	uint32_t len;
-#ifdef DEBUG
+
 	len = sprintf(buff, "st=%u;vm=%u;th=%u;dt=%u;dv=%u\r\n", 
 		control.step, control.vmax, control.thresh, control.dt, control.dv);
 	uart->Send(buff, len);
-#endif
 
 	len = sprintf(buff, "dv=%5u mV", control.dv);
 	draw_string(1, SCOPE_MAX_Y + 18, buff, len, GRID_COLOR, 0);
@@ -95,7 +94,7 @@ ControlState get_joystick_state() {
 void EINT3_IRQHandler() {
 	LED_On(1);
 
-	for (uint32_t i = 0; i < 2000000; i++) // debounce
+	for (uint32_t i = 0; i < 200000; i++) // debounce
 		;
 
 	switch (get_joystick_state()) {
@@ -104,7 +103,7 @@ void EINT3_IRQHandler() {
 				update_settings(control.step / 2, control.vmax, control.thresh);
 			break;
 		case LEFT:
-			if (control.step < 512)
+			if (control.step < 256)
 				update_settings(control.step * 2, control.vmax, control.thresh);
 			break;
 		case TOP:

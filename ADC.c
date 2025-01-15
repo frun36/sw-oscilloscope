@@ -19,7 +19,7 @@ uint16_t get_mv(uint32_t adc_val) {
 void ADC_IRQHandler() {
 	static uint16_t prev_mv = 0;
 	static uint32_t counter = 0;
-	static uint8_t count_threshold = 8;
+	uint32_t count_threshold = 8 * control.step;
 	static uint8_t triggered = 0;
 	
 	LED_On(2);
