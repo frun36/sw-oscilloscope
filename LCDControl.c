@@ -80,5 +80,4 @@ void draw_string(uint16_t x0, uint16_t y0, const char* str, uint16_t n, uint16_t
 	for (uint16_t i = 0; i < n; i++) {
 		draw_char(x0 + i * 8, y0, str[i], fg_color, bg_color);
 	}
-	
 }

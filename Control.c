@@ -42,10 +42,10 @@ static void update_settings(uint16_t new_step, uint16_t new_vmax, uint16_t new_t
 	uart->Send(buff, len);
 #endif
 
-	len = sprintf(buff, "dv=%u", control.dv);
-	draw_string(1, 1, buff, len, GRID_COLOR, 0);
-	len = sprintf(buff, "dt=%u", control.dt);
-	draw_string(1, 20, buff, len, GRID_COLOR, 0);
+	len = sprintf(buff, "dv=%7u", control.dv);
+	draw_string(1, SCOPE_MAX_Y - 1, buff, len, GRID_COLOR, 0);
+	len = sprintf(buff, "dt=%7u", control.dt);
+	draw_string(1, SCOPE_MAX_Y - 20, buff, len, GRID_COLOR, 0);
 }
 
 void init_control() {
@@ -102,7 +102,8 @@ void EINT3_IRQHandler() {
 				update_settings(control.step / 2, control.vmax, control.thresh);
 			break;
 		case LEFT:
-			update_settings(control.step * 2, control.vmax, control.thresh);
+			if (control.step < 512)
+				update_settings(control.step * 2, control.vmax, control.thresh);
 			break;
 		case TOP:
 			if (control.vmax >= 300)
